@@ -1,0 +1,129 @@
+{
+  "version": 1,
+  "supplyIntervalSeconds": 2400,
+  "items": {
+    "poke-ball": { "name": "Poké Ball", "icon": "items/balls/poke.png" },
+    "super-ball": { "name": "Super Ball", "icon": "items/balls/great.png" },
+    "ultra-ball": { "name": "Ultra Ball", "icon": "items/balls/ultra.png" },
+    "master-ball": { "name": "Master Ball", "icon": "items/balls/master.png" },
+    "razz-berry": { "name": "Baya Frambu", "icon": "items/berries/razz-gen7.png" },
+    "silver-razz-berry": { "name": "Baya Frambu Plateada", "icon": "items/berries/silver-razz.png" },
+    "golden-razz-berry": { "name": "Baya Frambu Dorada", "icon": "items/berries/golden-razz.png" },
+    "nanab-berry": { "name": "Baya Latano", "icon": "items/berries/nanab-gen7.png" },
+    "silver-nanab-berry": { "name": "Baya Latano Plateada", "icon": "items/berries/silver-nanab.png" },
+    "golden-nanab-berry": { "name": "Baya Latano Dorada", "icon": "items/berries/golden-nanab.png" },
+    "repel": { "name": "Repelente", "icon": "items/repels/repel.png" },
+    "super-repel": { "name": "Superrepelente", "icon": "items/repels/super-repel.png" },
+    "max-repel": { "name": "Repelente Máximo", "icon": "items/repels/max-repel.png" },
+    "incense-full": { "name": "Incienso Lento", "icon": "items/incense/full.png" },
+    "incense-lax": { "name": "Incienso Suave", "icon": "items/incense/lax.png" },
+    "incense-luck": { "name": "Incienso Duplo", "icon": "items/incense/luck.png" },
+    "incense-odd": { "name": "Incienso Raro", "icon": "items/incense/odd.png" },
+    "incense-pure": { "name": "Incienso Puro", "icon": "items/incense/pure.png" },
+    "incense-rock": { "name": "Incienso Roca", "icon": "items/incense/rock.png" },
+    "incense-rose": { "name": "Incienso Floral", "icon": "items/incense/rose.png" },
+    "incense-sea": { "name": "Incienso Marino", "icon": "items/incense/sea.png" },
+    "incense-wave": { "name": "Incienso Aqua", "icon": "items/incense/wave.png" }
+  },
+  "supplyBase": [
+    { "id": "poke-ball", "min": 4, "max": 7 },
+    { "id": "razz-berry", "min": 2, "max": 4 }
+  ],
+  "supplyBonusRolls": 2,
+  "supplyPool": [
+    { "id": "poke-ball", "weight": 35, "min": 2, "max": 4 },
+    { "id": "razz-berry", "weight": 23, "min": 1, "max": 3 },
+    { "id": "nanab-berry", "weight": 13, "min": 1, "max": 2 },
+    { "id": "super-ball", "weight": 12, "min": 1, "max": 2 },
+    { "id": "silver-razz-berry", "weight": 5, "min": 1, "max": 2 },
+    { "id": "silver-nanab-berry", "weight": 4, "min": 1, "max": 2 },
+    { "id": "ultra-ball", "weight": 2, "min": 1, "max": 1 },
+    { "id": "golden-razz-berry", "weight": 2, "min": 1, "max": 1 },
+    { "id": "golden-nanab-berry", "weight": 1, "min": 1, "max": 1 },
+    { "id": "repel", "weight": 8, "min": 1, "max": 2 },
+    { "id": "super-repel", "weight": 3, "min": 1, "max": 1 },
+    { "id": "max-repel", "weight": 1, "min": 1, "max": 1 },
+    { "id": "incense-full", "weight": 6, "min": 1, "max": 1 },
+    { "id": "incense-lax", "weight": 6, "min": 1, "max": 1 },
+    { "id": "incense-rock", "weight": 2, "min": 1, "max": 1 },
+    { "id": "incense-rose", "weight": 2, "min": 1, "max": 1 },
+    { "id": "incense-sea", "weight": 2, "min": 1, "max": 1 },
+    { "id": "incense-odd", "weight": 1, "min": 1, "max": 1 },
+    { "id": "incense-wave", "weight": 1, "min": 1, "max": 1 },
+    { "id": "incense-luck", "weight": 1, "min": 1, "max": 1 },
+    { "id": "incense-pure", "weight": 1, "min": 1, "max": 1 }
+  ],
+  "dailyBase": [
+    { "id": "poke-ball", "min": 8, "max": 12 },
+    { "id": "razz-berry", "min": 3, "max": 5 },
+    { "id": "nanab-berry", "min": 2, "max": 4 }
+  ],
+  "dailyBonusRolls": 2,
+  "dailyPool": [
+    { "id": "poke-ball", "weight": 25, "min": 3, "max": 6 },
+    { "id": "razz-berry", "weight": 20, "min": 1, "max": 3 },
+    { "id": "nanab-berry", "weight": 15, "min": 1, "max": 3 },
+    { "id": "super-ball", "weight": 12, "min": 1, "max": 3 },
+    { "id": "silver-razz-berry", "weight": 7, "min": 1, "max": 2 },
+    { "id": "repel", "weight": 7, "min": 1, "max": 2 },
+    { "id": "silver-nanab-berry", "weight": 5, "min": 1, "max": 2 },
+    { "id": "ultra-ball", "weight": 4, "min": 1, "max": 2 },
+    { "id": "golden-razz-berry", "weight": 3, "min": 1, "max": 1 },
+    { "id": "super-repel", "weight": 4, "min": 1, "max": 1 },
+    { "id": "incense-full", "weight": 5, "min": 1, "max": 1 },
+    { "id": "incense-lax", "weight": 5, "min": 1, "max": 1 },
+    { "id": "incense-rock", "weight": 2, "min": 1, "max": 1 },
+    { "id": "incense-rose", "weight": 2, "min": 1, "max": 1 },
+    { "id": "incense-sea", "weight": 2, "min": 1, "max": 1 },
+    { "id": "incense-odd", "weight": 1, "min": 1, "max": 1 },
+    { "id": "incense-wave", "weight": 1, "min": 1, "max": 1 },
+    { "id": "incense-luck", "weight": 1, "min": 1, "max": 1 },
+    { "id": "incense-pure", "weight": 1, "min": 1, "max": 1 },
+    { "id": "max-repel", "weight": 1, "min": 1, "max": 1 }
+  ],
+  "normalDuplicateRewards": {
+    "common": [
+      { "id": "poke-ball", "chance": 1.0, "min": 2, "max": 4 },
+      { "id": "razz-berry", "chance": 0.70, "min": 1, "max": 2 }
+    ],
+    "uncommon": [
+      { "id": "poke-ball", "chance": 1.0, "min": 3, "max": 5 },
+      { "id": "razz-berry", "chance": 0.85, "min": 1, "max": 3 },
+      { "id": "nanab-berry", "chance": 0.45, "min": 1, "max": 2 }
+    ],
+    "rare": [
+      { "id": "super-ball", "chance": 1.0, "min": 2, "max": 4 },
+      { "id": "poke-ball", "chance": 0.70, "min": 3, "max": 6 },
+      { "id": "silver-razz-berry", "chance": 0.55, "min": 1, "max": 2 }
+    ],
+    "epic": [
+      { "id": "super-ball", "chance": 1.0, "min": 3, "max": 5 },
+      { "id": "ultra-ball", "chance": 0.60, "min": 1, "max": 2 },
+      { "id": "golden-razz-berry", "chance": 0.55, "min": 1, "max": 2 },
+      { "id": "incense-full", "chance": 0.18, "min": 1, "max": 1 }
+    ],
+    "legendary": [
+      { "id": "ultra-ball", "chance": 1.0, "min": 3, "max": 5 },
+      { "id": "silver-razz-berry", "chance": 0.75, "min": 2, "max": 4 },
+      { "id": "incense-luck", "chance": 0.18, "min": 1, "max": 1 },
+      { "id": "incense-pure", "chance": 0.04, "min": 1, "max": 1 }
+    ]
+  },
+  "shinyDuplicateBonusRolls": 2,
+  "shinyDuplicateMasterBallDenominator": 2048,
+  "shinyDuplicatePool": [
+    { "id": "ultra-ball", "weight": 12, "chance": 1, "min": 2, "max": 5 },
+    { "id": "golden-razz-berry", "weight": 10, "chance": 1, "min": 2, "max": 4 },
+    { "id": "golden-nanab-berry", "weight": 6, "chance": 1, "min": 1, "max": 3 },
+    { "id": "max-repel", "weight": 5, "chance": 0.55, "min": 1, "max": 1 },
+    { "id": "incense-luck", "weight": 5, "chance": 0.55, "min": 1, "max": 1 },
+    { "id": "incense-odd", "weight": 5, "chance": 0.50, "min": 1, "max": 1 },
+    { "id": "incense-pure", "weight": 4, "chance": 0.35, "min": 1, "max": 1 },
+    { "id": "incense-wave", "weight": 5, "chance": 0.50, "min": 1, "max": 1 },
+    { "id": "incense-rock", "weight": 6, "chance": 0.60, "min": 1, "max": 1 },
+    { "id": "incense-rose", "weight": 6, "chance": 0.60, "min": 1, "max": 1 },
+    { "id": "incense-sea", "weight": 6, "chance": 0.60, "min": 1, "max": 1 },
+    { "id": "super-repel", "weight": 5, "chance": 0.55, "min": 1, "max": 2 },
+    { "id": "ultra-ball", "weight": 10, "chance": 1, "min": 3, "max": 7 }
+  ]
+}

@@ -1,0 +1,93 @@
+name: Windows Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Verify release tag matches project version
+        shell: pwsh
+        run: |
+          $tagVersion = $env:GITHUB_REF_NAME.TrimStart('v')
+          [xml]$project = Get-Content 'src/PokeGrass.App/PokeGrass.App.csproj'
+          $projectVersion = $project.Project.PropertyGroup.Version | Where-Object { $_ } | Select-Object -First 1
+          if ($tagVersion -ne $projectVersion) { throw "Tag $tagVersion does not match csproj version $projectVersion." }
+          "APP_VERSION=$tagVersion" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+          $notesPath = "docs/releases/$tagVersion.md"
+          if (-not (Test-Path $notesPath)) { throw "Missing release notes: $notesPath" }
+          $releaseName = if ($env:GITHUB_REF_NAME -eq 'v0.1.0-beta') { 'PokéGrass v0.1.0 Beta' } else { "PokéGrass $env:GITHUB_REF_NAME" }
+          $isPrerelease = if ($tagVersion.Contains('-')) { 'true' } else { 'false' }
+          "RELEASE_NOTES=$notesPath" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+          "RELEASE_NAME=$releaseName" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+          "IS_PRERELEASE=$isPrerelease" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+
+      - name: Restore
+        run: dotnet restore src/PokeGrass.App/PokeGrass.App.csproj
+
+      - name: Publish self-contained Windows x64
+        run: dotnet publish src/PokeGrass.App/PokeGrass.App.csproj -c Release -f net10.0-windows -r win-x64 --self-contained true -p:PublishSingleFile=false -p:PublishTrimmed=false -o publish
+
+      - name: Run application self-tests
+        shell: pwsh
+        run: |
+          $testProcess = Start-Process -FilePath '.\publish\PokéGrass.exe' -ArgumentList '--self-test' -Wait -PassThru
+          if ($testProcess.ExitCode -ne 0) { throw "PokéGrass self-tests failed with exit code $($testProcess.ExitCode)." }
+
+      - name: Install Velopack CLI
+        run: dotnet tool install --global vpk --version 1.2.161
+
+      - name: Download prior release metadata when available
+        shell: pwsh
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          $ErrorActionPreference = 'Continue'
+          vpk download github --repoUrl "https://github.com/$env:GITHUB_REPOSITORY" --token $env:GITHUB_TOKEN
+          if ($LASTEXITCODE -ne 0) { Write-Host 'No prior Velopack release was available; a full package will be generated.' }
+          $global:LASTEXITCODE = 0
+
+      - name: Create installer and update packages
+        run: vpk pack --packId PokeGrass --packVersion $env:APP_VERSION --packDir publish --mainExe PokéGrass.exe --packTitle PokéGrass --packAuthors Joaqx3wa --icon assets/ui/pokegrass-masterball.ico --runtime win-x64 --outputDir Releases
+
+      - name: Verify installer and update metadata
+        shell: pwsh
+        run: |
+          $required = @('PokeGrass-win-Setup.exe', 'releases.win.json')
+          foreach ($name in $required) {
+            if (-not (Test-Path (Join-Path 'Releases' $name))) { throw "Missing release artifact: $name" }
+          }
+          $expectedPackage = "PokeGrass-$env:APP_VERSION-full.nupkg"
+          $fullPackagePath = Join-Path 'Releases' $expectedPackage
+          if (-not (Test-Path $fullPackagePath)) { throw "Missing full package for $env:APP_VERSION." }
+          $metadata = Get-Content 'Releases/releases.win.json' -Raw | ConvertFrom-Json
+          if (-not ($metadata.Assets | Where-Object { $_.Version -eq $env:APP_VERSION -and $_.FileName -eq $expectedPackage })) {
+            throw "Velopack metadata does not contain $env:APP_VERSION."
+          }
+          $fullPackage = Get-Item $fullPackagePath
+          Write-Host "Installer: $((Get-Item 'Releases/PokeGrass-win-Setup.exe').Length) bytes; package: $($fullPackage.Length) bytes"
+
+      - name: Publish GitHub Release
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: vpk upload github --repoUrl "https://github.com/$env:GITHUB_REPOSITORY" --token $env:GITHUB_TOKEN --publish --pre $env:IS_PRERELEASE --releaseName "$env:RELEASE_NAME" --releaseNotes $env:RELEASE_NOTES --tag $env:GITHUB_REF_NAME --outputDir Releases
+
+      - name: Save package size report
+        if: always()
+        shell: pwsh
+        run: |
+          if (Test-Path Releases) { Get-ChildItem Releases -File | Select-Object Name,Length | Format-Table | Out-String | Write-Host }

@@ -1,0 +1,1165 @@
+[
+  {
+    "id": "000",
+    "reason": "Marcador de recurso; no es una especie de Pokémon.",
+    "missing": [],
+    "mega": false
+  },
+  {
+    "id": "ABOMASNOW_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "ABSOL_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "ABSOL_2",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "AEGISLASH_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "AERODACTYL_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "AGGRON_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "ALAKAZAM_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "ALTARIA_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "AMPHAROS_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "ARCEUS_9",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\encounter\\normal",
+      "pokemon\\encounter\\shiny",
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "AUDINO_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "BANETTE_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "BARBARACLE_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "BASCULEGION_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\encounter\\normal",
+      "pokemon\\encounter\\shiny",
+      "pokemon\\walking\\normal",
+      "pokemon\\icons\\normal",
+      "pokemon\\icons\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "BAXCALIBUR_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "BEEDRILL_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "BLASTOISE_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "BLAZIKEN_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "BOMBIRDIERs",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\encounter\\normal",
+      "pokemon\\encounter\\shiny",
+      "pokemon\\walking\\shiny",
+      "pokemon\\icons\\normal",
+      "pokemon\\icons\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "CAMERUPT_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "CASTFORM_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "CASTFORM_2",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "CASTFORM_3",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "CHANDELURE_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "CHARIZARD_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "CHARIZARD_2",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "CHERRIM_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "CHESNAUGHT_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "CHIMECHO_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "COMBEE_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\encounter\\normal",
+      "pokemon\\encounter\\shiny",
+      "pokemon\\walking\\normal",
+      "pokemon\\icons\\normal",
+      "pokemon\\icons\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "CORVIKNIGHT_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\encounter\\normal",
+      "pokemon\\encounter\\shiny",
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "CRABOMINABLE_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "CRAMORANT_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "CRAMORANT_2",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "DARKRAI_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "DARMANITAN_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "DARMANITAN_3",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "DARUMAKA_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny",
+      "pokemon\\icons\\normal",
+      "pokemon\\icons\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "DELPHOX_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "DIANCIE_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "DRAGALGE_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "DRAGONITE_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "DRAMPA_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "EELEKTROSS_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "EISCUE_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "EMBOAR_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "EXCADRILL_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "FALINKS_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "FERALIGATR_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "FLOETTE_5",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\icons\\normal"
+    ],
+    "mega": false
+  },
+  {
+    "id": "FLOETTE_6",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "FROSLASS_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "GALLADE_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "GARCHOMP_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "GARCHOMP_2",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "GARDEVOIR_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "GENGAR_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "GLALIE_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "GLIMMORA_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "GOLISOPOD_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "GOLURK_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "GOURGEIST_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny",
+      "pokemon\\icons\\normal",
+      "pokemon\\icons\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "GOURGEIST_2",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny",
+      "pokemon\\icons\\normal",
+      "pokemon\\icons\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "GOURGEIST_3",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny",
+      "pokemon\\icons\\normal",
+      "pokemon\\icons\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "GRENINJA_2",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "GRENINJA_3",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "GROUDON_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "GYARADOS_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "HAWLUCHA_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "HEATRAN_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "HERACROSS_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "HOUDOOM_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\encounter\\normal",
+      "pokemon\\encounter\\shiny",
+      "pokemon\\walking\\shiny",
+      "pokemon\\icons\\normal",
+      "pokemon\\icons\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "HOUNDOOM_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "KANGASKHAN_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "KYOGRE_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "KYUREM_3",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "KYUREM_4",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "LATIAS_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "LATIOS_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "LOPUNNY_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "LUCARIO_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "LUCARIO_2",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "LUNALA_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny",
+      "pokemon\\icons\\normal",
+      "pokemon\\icons\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "MAGEARNA_2",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "MAGEARNA_3",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "MALAMAR_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "MANECTRIC_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "MARSHADOW_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny",
+      "pokemon\\icons\\normal",
+      "pokemon\\icons\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "MAWILE_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "MEDICHAM_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "MEGANIUM_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "MEOWSTIC_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "MEOWSTIC_2",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "MEOWSTIC_3",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "MEOWSTIC_female",
+    "reason": "Falta un sprite femenino exacto de encounter o no existe el asset femenino ni el fallback de su misma forma.",
+    "missing": [
+      "pokemon\\encounter\\normal",
+      "pokemon\\encounter\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "METAGROSS_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "MEWTWO_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "MEWTWO_2",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "MIMIKYU_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "NECROZMA_3",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "NECROZMA_4",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "OGERPON_11",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "ORTHWORMs",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\encounter\\normal",
+      "pokemon\\encounter\\shiny",
+      "pokemon\\walking\\shiny",
+      "pokemon\\icons\\normal",
+      "pokemon\\icons\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "PECHARUNT_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\encounter\\normal",
+      "pokemon\\encounter\\shiny",
+      "pokemon\\icons\\normal",
+      "pokemon\\icons\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "PIDGEOT_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "PIKACHU_16",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\encounter\\shiny",
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny",
+      "pokemon\\icons\\normal",
+      "pokemon\\icons\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "PINSIR_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "PUMPKABOO_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny",
+      "pokemon\\icons\\normal",
+      "pokemon\\icons\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "PUMPKABOO_2",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny",
+      "pokemon\\icons\\normal",
+      "pokemon\\icons\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "PUMPKABOO_3",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny",
+      "pokemon\\icons\\normal",
+      "pokemon\\icons\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "PYROAR_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "RAICHU_2",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "RAICHU_2b",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\encounter\\normal",
+      "pokemon\\encounter\\shiny",
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny",
+      "pokemon\\icons\\normal"
+    ],
+    "mega": false
+  },
+  {
+    "id": "RAICHU_3",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "RAYQUAZA_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "SABLEYE_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "SALAMENCE_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "SCEPTILE_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "SCIZOR_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "SCOLIPEDE_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "SCOVILLAIN_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "SCRAFTY_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "SHARPEDO_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "SKARMORY_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "SLOWBRO_2",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "SOLGALEO_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny",
+      "pokemon\\icons\\normal",
+      "pokemon\\icons\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "STARAPTOR_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "STARMIE_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "STEELIX_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "SWAMPERT_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "TATSUGIRI_3",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "TATSUGIRI_4",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "TATSUGIRI_5",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "TORCHIC_female",
+    "reason": "Falta un sprite femenino exacto de encounter o no existe el asset femenino ni el fallback de su misma forma.",
+    "missing": [
+      "pokemon\\encounter\\normal",
+      "pokemon\\encounter\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "TYRANITAR_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "VENUSAUR_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "VICTREEBEL_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "WISHIWASHI_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "ZACIAN_2",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny",
+      "pokemon\\icons\\normal",
+      "pokemon\\icons\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "ZAMAZENTA_2",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny",
+      "pokemon\\icons\\normal",
+      "pokemon\\icons\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "ZARUDE_1",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "ZERAORA_1",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  },
+  {
+    "id": "ZYGARDE_2",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "ZYGARDE_3",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "ZYGARDE_4",
+    "reason": "Faltan recursos exactos compatibles; no se usan alias ni sprites de otra forma.",
+    "missing": [
+      "pokemon\\walking\\normal",
+      "pokemon\\walking\\shiny"
+    ],
+    "mega": false
+  },
+  {
+    "id": "ZYGARDE_5",
+    "reason": "Forma Mega identificada explícitamente en mega-form-exclusions.json.",
+    "missing": [],
+    "mega": true
+  }
+]

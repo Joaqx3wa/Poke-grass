@@ -1,0 +1,23 @@
+<Window x:Class="PokeGrass.CapturePanelWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PokéGrass · Captura"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Topmost="True"
+        ShowInTaskbar="False"
+        ShowActivated="False"
+        SizeToContent="Manual"
+        Width="422"
+        Height="286"
+        UseLayoutRounding="True"
+        SnapsToDevicePixels="True">
+  <Canvas x:Name="RootCanvas"
+          Width="422"
+          Height="286"
+          Background="Transparent"
+          UseLayoutRounding="True"
+          SnapsToDevicePixels="True" />
+</Window>

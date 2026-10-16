@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>..\..\assets\ui\pokegrass-masterball.ico</ApplicationIcon>
+    <!-- WPF reads PMv2 from the manifest; WFO0003 is a WinForms-only suggestion. -->
+    <NoWarn>$(NoWarn);WFO0003</NoWarn>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>PokéGrass</AssemblyName>
+    <RootNamespace>PokeGrass</RootNamespace>
+    <Version>0.1.0-beta</Version>
+    <InformationalVersion>$(Version)</InformationalVersion>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+    <StartupObject>PokeGrass.App</StartupObject>
+  </PropertyGroup>
+
+  <!-- Opt-in only for the temporary rally test build; regular Release keeps its timeout. -->
+  <PropertyGroup Condition="'$(TeamRallyNoGatherTimeoutForTesting)' == 'true'">
+    <DefineConstants>$(DefineConstants);TEAM_RALLY_NO_GATHER_TIMEOUT</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ApplicationDefinition Remove="App.xaml" />
+    <Page Include="App.xaml" />
+    <Resource Include="..\..\assets\fonts\Minecraft.ttf" Link="assets\fonts\Minecraft.ttf" />
+    <Content Include="..\..\assets\**\*">
+      <Link>assets\%(RecursiveDir)%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NVorbis" Version="0.10.5" />
+    <PackageReference Include="Velopack" Version="1.2.161" />
+  </ItemGroup>
+</Project>

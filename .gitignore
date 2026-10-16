@@ -1,0 +1,39 @@
+# .NET / Visual Studio build output
+**/bin/
+**/obj/
+**/.vs/
+**/TestResults/
+*.user
+*.suo
+*.cache
+*.pdb
+
+# Local distribution output
+/publish/
+/Releases/
+/artifacts/
+**/artifacts/
+/outputs/
+**/outputs/
+/work/
+**/work/
+*.nupkg
+*.partial
+*.tmp
+*.log
+
+# Local app data, saves, and generated diagnostics
+save.json
+save.backup-*.json
+save.before-restore-*.json
+PokéGrass/Backups/
+**/Backups/
+TestResults/
+
+# Local credentials and signing material
+.env
+.env.*
+*.pfx
+*.snk
+*.p12
+secrets.json

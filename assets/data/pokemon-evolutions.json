@@ -1,0 +1,2144 @@
+{
+  "source": "PokeAPI data/v2/csv/pokemon_species.csv, pokemon_evolution.csv, pokemon.csv, pokemon_forms.csv; forms linked by stable PokeAPI form IDs and mapped to PokéGrass catalog IDs",
+  "sourceRetrieved": "2026-10-15",
+  "evolutions": [
+    {
+      "fromId": "ABRA",
+      "toId": "KADABRA"
+    },
+    {
+      "fromId": "AIPOM",
+      "toId": "AMBIPOM"
+    },
+    {
+      "fromId": "AMAURA",
+      "toId": "AURORUS"
+    },
+    {
+      "fromId": "ANORITH",
+      "toId": "ARMALDO"
+    },
+    {
+      "fromId": "APPLIN",
+      "toId": "APPLETUN"
+    },
+    {
+      "fromId": "APPLIN",
+      "toId": "DIPPLIN"
+    },
+    {
+      "fromId": "APPLIN",
+      "toId": "FLAPPLE"
+    },
+    {
+      "fromId": "ARCHEN",
+      "toId": "ARCHEOPS"
+    },
+    {
+      "fromId": "ARCTIBAX",
+      "toId": "BAXCALIBUR"
+    },
+    {
+      "fromId": "ARON",
+      "toId": "LAIRON"
+    },
+    {
+      "fromId": "ARROKUDA",
+      "toId": "BARRASKEWDA"
+    },
+    {
+      "fromId": "AXEW",
+      "toId": "FRAXURE"
+    },
+    {
+      "fromId": "AZURILL",
+      "toId": "MARILL"
+    },
+    {
+      "fromId": "BAGON",
+      "toId": "SHELGON"
+    },
+    {
+      "fromId": "BALTOY",
+      "toId": "CLAYDOL"
+    },
+    {
+      "fromId": "BARBOACH",
+      "toId": "WHISCASH"
+    },
+    {
+      "fromId": "BASCULIN_2",
+      "toId": "BASCULEGION"
+    },
+    {
+      "fromId": "BAYLEEF",
+      "toId": "MEGANIUM"
+    },
+    {
+      "fromId": "BELDUM",
+      "toId": "METANG"
+    },
+    {
+      "fromId": "BELLSPROUT",
+      "toId": "WEEPINBELL"
+    },
+    {
+      "fromId": "BERGMITE",
+      "toId": "AVALUGG"
+    },
+    {
+      "fromId": "BERGMITE",
+      "toId": "AVALUGG_1"
+    },
+    {
+      "fromId": "BIDOOF",
+      "toId": "BIBAREL"
+    },
+    {
+      "fromId": "BINACLE",
+      "toId": "BARBARACLE"
+    },
+    {
+      "fromId": "BISHARP",
+      "toId": "KINGAMBIT"
+    },
+    {
+      "fromId": "BLIPBUG",
+      "toId": "DOTTLER"
+    },
+    {
+      "fromId": "BLITZLE",
+      "toId": "ZEBSTRIKA"
+    },
+    {
+      "fromId": "BOLDORE",
+      "toId": "GIGALITH"
+    },
+    {
+      "fromId": "BONSLY",
+      "toId": "SUDOWOODO"
+    },
+    {
+      "fromId": "BOUNSWEET",
+      "toId": "STEENEE"
+    },
+    {
+      "fromId": "BRAIXEN",
+      "toId": "DELPHOX"
+    },
+    {
+      "fromId": "BRAMBLIN",
+      "toId": "BRAMBLEGHAST"
+    },
+    {
+      "fromId": "BRIONNE",
+      "toId": "PRIMARINA"
+    },
+    {
+      "fromId": "BRONZOR",
+      "toId": "BRONZONG"
+    },
+    {
+      "fromId": "BUDEW",
+      "toId": "ROSELIA"
+    },
+    {
+      "fromId": "BUIZEL",
+      "toId": "FLOATZEL"
+    },
+    {
+      "fromId": "BULBASAUR",
+      "toId": "IVYSAUR"
+    },
+    {
+      "fromId": "BUNEARY",
+      "toId": "LOPUNNY"
+    },
+    {
+      "fromId": "BUNNELBY",
+      "toId": "DIGGERSBY"
+    },
+    {
+      "fromId": "BURMY",
+      "toId": "MOTHIM",
+      "requiredSex": "male"
+    },
+    {
+      "fromId": "BURMY",
+      "toId": "WORMADAM",
+      "requiredSex": "female"
+    },
+    {
+      "fromId": "BURMY_1",
+      "toId": "MOTHIM",
+      "requiredSex": "male"
+    },
+    {
+      "fromId": "BURMY_1",
+      "toId": "WORMADAM_1"
+    },
+    {
+      "fromId": "BURMY_2",
+      "toId": "MOTHIM",
+      "requiredSex": "male"
+    },
+    {
+      "fromId": "BURMY_2",
+      "toId": "WORMADAM_2"
+    },
+    {
+      "fromId": "CACNEA",
+      "toId": "CACTURNE"
+    },
+    {
+      "fromId": "CAPSAKID",
+      "toId": "SCOVILLAIN"
+    },
+    {
+      "fromId": "CARKOL",
+      "toId": "COALOSSAL"
+    },
+    {
+      "fromId": "CARVANHA",
+      "toId": "SHARPEDO"
+    },
+    {
+      "fromId": "CASCOON",
+      "toId": "DUSTOX"
+    },
+    {
+      "fromId": "CATERPIE",
+      "toId": "METAPOD"
+    },
+    {
+      "fromId": "CETODDLE",
+      "toId": "CETITAN"
+    },
+    {
+      "fromId": "CHANSEY",
+      "toId": "BLISSEY"
+    },
+    {
+      "fromId": "CHARCADET",
+      "toId": "ARMAROUGE"
+    },
+    {
+      "fromId": "CHARCADET",
+      "toId": "CERULEDGE"
+    },
+    {
+      "fromId": "CHARJABUG",
+      "toId": "VIKAVOLT"
+    },
+    {
+      "fromId": "CHARMANDER",
+      "toId": "CHARMELEON"
+    },
+    {
+      "fromId": "CHARMELEON",
+      "toId": "CHARIZARD"
+    },
+    {
+      "fromId": "CHERUBI",
+      "toId": "CHERRIM"
+    },
+    {
+      "fromId": "CHESPIN",
+      "toId": "QUILLADIN"
+    },
+    {
+      "fromId": "CHEWTLE",
+      "toId": "DREDNAW"
+    },
+    {
+      "fromId": "CHIKORITA",
+      "toId": "BAYLEEF"
+    },
+    {
+      "fromId": "CHIMCHAR",
+      "toId": "MONFERNO"
+    },
+    {
+      "fromId": "CHINCHOU",
+      "toId": "LANTURN"
+    },
+    {
+      "fromId": "CHINGLING",
+      "toId": "CHIMECHO"
+    },
+    {
+      "fromId": "CLAMPERL",
+      "toId": "GOREBYSS"
+    },
+    {
+      "fromId": "CLAMPERL",
+      "toId": "HUNTAIL"
+    },
+    {
+      "fromId": "CLAUNCHER",
+      "toId": "CLAWITZER"
+    },
+    {
+      "fromId": "CLEFAIRY",
+      "toId": "CLEFABLE"
+    },
+    {
+      "fromId": "CLEFFA",
+      "toId": "CLEFAIRY"
+    },
+    {
+      "fromId": "CLOBBOPUS",
+      "toId": "GRAPPLOCT"
+    },
+    {
+      "fromId": "COMBEE",
+      "toId": "VESPIQUEN",
+      "requiredSex": "female"
+    },
+    {
+      "fromId": "COMBUSKEN",
+      "toId": "BLAZIKEN"
+    },
+    {
+      "fromId": "CORPHISH",
+      "toId": "CRAWDAUNT"
+    },
+    {
+      "fromId": "CORSOLA_1",
+      "toId": "CURSOLA"
+    },
+    {
+      "fromId": "CORVISQUIRE",
+      "toId": "CORVIKNIGHT"
+    },
+    {
+      "fromId": "COSMOEM",
+      "toId": "LUNALA"
+    },
+    {
+      "fromId": "COSMOEM",
+      "toId": "SOLGALEO"
+    },
+    {
+      "fromId": "COSMOG",
+      "toId": "COSMOEM"
+    },
+    {
+      "fromId": "COTTONEE",
+      "toId": "WHIMSICOTT"
+    },
+    {
+      "fromId": "CRABRAWLER",
+      "toId": "CRABOMINABLE"
+    },
+    {
+      "fromId": "CRANIDOS",
+      "toId": "RAMPARDOS"
+    },
+    {
+      "fromId": "CROAGUNK",
+      "toId": "TOXICROAK"
+    },
+    {
+      "fromId": "CROCALOR",
+      "toId": "SKELEDIRGE"
+    },
+    {
+      "fromId": "CROCONAW",
+      "toId": "FERALIGATR"
+    },
+    {
+      "fromId": "CUBCHOO",
+      "toId": "BEARTIC"
+    },
+    {
+      "fromId": "CUBONE",
+      "toId": "MAROWAK"
+    },
+    {
+      "fromId": "CUBONE",
+      "toId": "MAROWAK_1"
+    },
+    {
+      "fromId": "CUFANT",
+      "toId": "COPPERAJAH"
+    },
+    {
+      "fromId": "CUTIEFLY",
+      "toId": "RIBOMBEE"
+    },
+    {
+      "fromId": "CYNDAQUIL",
+      "toId": "QUILAVA"
+    },
+    {
+      "fromId": "DARTRIX",
+      "toId": "DECIDUEYE"
+    },
+    {
+      "fromId": "DARTRIX",
+      "toId": "DECIDUEYE_1"
+    },
+    {
+      "fromId": "DARUMAKA",
+      "toId": "DARMANITAN"
+    },
+    {
+      "fromId": "DEERLING",
+      "toId": "SAWSBUCK"
+    },
+    {
+      "fromId": "DEERLING_1",
+      "toId": "SAWSBUCK_1"
+    },
+    {
+      "fromId": "DEERLING_2",
+      "toId": "SAWSBUCK_2"
+    },
+    {
+      "fromId": "DEERLING_3",
+      "toId": "SAWSBUCK_3"
+    },
+    {
+      "fromId": "DEINO",
+      "toId": "ZWEILOUS"
+    },
+    {
+      "fromId": "DEWOTT",
+      "toId": "SAMUROTT"
+    },
+    {
+      "fromId": "DEWOTT",
+      "toId": "SAMUROTT_1"
+    },
+    {
+      "fromId": "DEWPIDER",
+      "toId": "ARAQUANID"
+    },
+    {
+      "fromId": "DIGLETT",
+      "toId": "DUGTRIO"
+    },
+    {
+      "fromId": "DIGLETT_1",
+      "toId": "DUGTRIO_1"
+    },
+    {
+      "fromId": "DIPPLIN",
+      "toId": "HYDRAPPLE"
+    },
+    {
+      "fromId": "DODUO",
+      "toId": "DODRIO"
+    },
+    {
+      "fromId": "DOLLIV",
+      "toId": "ARBOLIVA"
+    },
+    {
+      "fromId": "DOTTLER",
+      "toId": "ORBEETLE"
+    },
+    {
+      "fromId": "DOUBLADE",
+      "toId": "AEGISLASH"
+    },
+    {
+      "fromId": "DRAGONAIR",
+      "toId": "DRAGONITE"
+    },
+    {
+      "fromId": "DRAKLOAK",
+      "toId": "DRAGAPULT"
+    },
+    {
+      "fromId": "DRATINI",
+      "toId": "DRAGONAIR"
+    },
+    {
+      "fromId": "DREEPY",
+      "toId": "DRAKLOAK"
+    },
+    {
+      "fromId": "DRIFLOON",
+      "toId": "DRIFBLIM"
+    },
+    {
+      "fromId": "DRILBUR",
+      "toId": "EXCADRILL"
+    },
+    {
+      "fromId": "DRIZZILE",
+      "toId": "INTELEON"
+    },
+    {
+      "fromId": "DROWZEE",
+      "toId": "HYPNO"
+    },
+    {
+      "fromId": "DUCKLETT",
+      "toId": "SWANNA"
+    },
+    {
+      "fromId": "DUNSPARCE",
+      "toId": "DUDUNSPARCE"
+    },
+    {
+      "fromId": "DUNSPARCE",
+      "toId": "DUDUNSPARCE_1"
+    },
+    {
+      "fromId": "DUOSION",
+      "toId": "REUNICLUS"
+    },
+    {
+      "fromId": "DURALUDON",
+      "toId": "ARCHALUDON"
+    },
+    {
+      "fromId": "DUSCLOPS",
+      "toId": "DUSKNOIR"
+    },
+    {
+      "fromId": "DUSKULL",
+      "toId": "DUSCLOPS"
+    },
+    {
+      "fromId": "DWEBBLE",
+      "toId": "CRUSTLE"
+    },
+    {
+      "fromId": "EELEKTRIK",
+      "toId": "EELEKTROSS"
+    },
+    {
+      "fromId": "EEVEE",
+      "toId": "ESPEON"
+    },
+    {
+      "fromId": "EEVEE",
+      "toId": "FLAREON"
+    },
+    {
+      "fromId": "EEVEE",
+      "toId": "GLACEON"
+    },
+    {
+      "fromId": "EEVEE",
+      "toId": "JOLTEON"
+    },
+    {
+      "fromId": "EEVEE",
+      "toId": "LEAFEON"
+    },
+    {
+      "fromId": "EEVEE",
+      "toId": "SYLVEON"
+    },
+    {
+      "fromId": "EEVEE",
+      "toId": "UMBREON"
+    },
+    {
+      "fromId": "EEVEE",
+      "toId": "VAPOREON"
+    },
+    {
+      "fromId": "EKANS",
+      "toId": "ARBOK"
+    },
+    {
+      "fromId": "ELECTABUZZ",
+      "toId": "ELECTIVIRE"
+    },
+    {
+      "fromId": "ELECTRIKE",
+      "toId": "MANECTRIC"
+    },
+    {
+      "fromId": "ELEKID",
+      "toId": "ELECTABUZZ"
+    },
+    {
+      "fromId": "ELGYEM",
+      "toId": "BEHEEYEM"
+    },
+    {
+      "fromId": "ESPURR",
+      "toId": "MEOWSTIC"
+    },
+    {
+      "fromId": "EXEGGCUTE",
+      "toId": "EXEGGUTOR"
+    },
+    {
+      "fromId": "EXEGGCUTE",
+      "toId": "EXEGGUTOR_1"
+    },
+    {
+      "fromId": "FARFETCHD_1",
+      "toId": "SIRFETCHD"
+    },
+    {
+      "fromId": "FEEBAS",
+      "toId": "MILOTIC"
+    },
+    {
+      "fromId": "FENNEKIN",
+      "toId": "BRAIXEN"
+    },
+    {
+      "fromId": "FERROSEED",
+      "toId": "FERROTHORN"
+    },
+    {
+      "fromId": "FIDOUGH",
+      "toId": "DACHSBUN"
+    },
+    {
+      "fromId": "FINIZEN",
+      "toId": "PALAFIN"
+    },
+    {
+      "fromId": "FINNEON",
+      "toId": "LUMINEON"
+    },
+    {
+      "fromId": "FLAAFFY",
+      "toId": "AMPHAROS"
+    },
+    {
+      "fromId": "FLABEBE",
+      "toId": "FLOETTE"
+    },
+    {
+      "fromId": "FLABEBE_1",
+      "toId": "FLOETTE_1"
+    },
+    {
+      "fromId": "FLABEBE_2",
+      "toId": "FLOETTE_2"
+    },
+    {
+      "fromId": "FLABEBE_3",
+      "toId": "FLOETTE_3"
+    },
+    {
+      "fromId": "FLABEBE_4",
+      "toId": "FLOETTE_4"
+    },
+    {
+      "fromId": "FLETCHINDER",
+      "toId": "TALONFLAME"
+    },
+    {
+      "fromId": "FLETCHLING",
+      "toId": "FLETCHINDER"
+    },
+    {
+      "fromId": "FLITTLE",
+      "toId": "ESPATHRA"
+    },
+    {
+      "fromId": "FLOETTE",
+      "toId": "FLORGES"
+    },
+    {
+      "fromId": "FLOETTE_1",
+      "toId": "FLORGES_1"
+    },
+    {
+      "fromId": "FLOETTE_2",
+      "toId": "FLORGES_2"
+    },
+    {
+      "fromId": "FLOETTE_3",
+      "toId": "FLORGES_3"
+    },
+    {
+      "fromId": "FLOETTE_4",
+      "toId": "FLORGES_4"
+    },
+    {
+      "fromId": "FLORAGATO",
+      "toId": "MEOWSCARADA"
+    },
+    {
+      "fromId": "FOMANTIS",
+      "toId": "LURANTIS"
+    },
+    {
+      "fromId": "FOONGUS",
+      "toId": "AMOONGUSS"
+    },
+    {
+      "fromId": "FRAXURE",
+      "toId": "HAXORUS"
+    },
+    {
+      "fromId": "FRIGIBAX",
+      "toId": "ARCTIBAX"
+    },
+    {
+      "fromId": "FRILLISH",
+      "toId": "JELLICENT"
+    },
+    {
+      "fromId": "FROAKIE",
+      "toId": "FROGADIER"
+    },
+    {
+      "fromId": "FROGADIER",
+      "toId": "GRENINJA"
+    },
+    {
+      "fromId": "FUECOCO",
+      "toId": "CROCALOR"
+    },
+    {
+      "fromId": "GABITE",
+      "toId": "GARCHOMP"
+    },
+    {
+      "fromId": "GASTLY",
+      "toId": "HAUNTER"
+    },
+    {
+      "fromId": "GEODUDE",
+      "toId": "GRAVELER"
+    },
+    {
+      "fromId": "GEODUDE_1",
+      "toId": "GRAVELER_1"
+    },
+    {
+      "fromId": "GIBLE",
+      "toId": "GABITE"
+    },
+    {
+      "fromId": "GIMMIGHOUL",
+      "toId": "GHOLDENGO"
+    },
+    {
+      "fromId": "GIRAFARIG",
+      "toId": "FARIGIRAF"
+    },
+    {
+      "fromId": "GLAMEOW",
+      "toId": "PURUGLY"
+    },
+    {
+      "fromId": "GLIGAR",
+      "toId": "GLISCOR"
+    },
+    {
+      "fromId": "GLIMMET",
+      "toId": "GLIMMORA"
+    },
+    {
+      "fromId": "GLOOM",
+      "toId": "BELLOSSOM"
+    },
+    {
+      "fromId": "GLOOM",
+      "toId": "VILEPLUME"
+    },
+    {
+      "fromId": "GOLBAT",
+      "toId": "CROBAT"
+    },
+    {
+      "fromId": "GOLDEEN",
+      "toId": "SEAKING"
+    },
+    {
+      "fromId": "GOLETT",
+      "toId": "GOLURK"
+    },
+    {
+      "fromId": "GOOMY",
+      "toId": "SLIGGOO"
+    },
+    {
+      "fromId": "GOOMY",
+      "toId": "SLIGGOO_1"
+    },
+    {
+      "fromId": "GOSSIFLEUR",
+      "toId": "ELDEGOSS"
+    },
+    {
+      "fromId": "GOTHITA",
+      "toId": "GOTHORITA"
+    },
+    {
+      "fromId": "GOTHORITA",
+      "toId": "GOTHITELLE"
+    },
+    {
+      "fromId": "GRAVELER",
+      "toId": "GOLEM"
+    },
+    {
+      "fromId": "GRAVELER_1",
+      "toId": "GOLEM_1"
+    },
+    {
+      "fromId": "GREAVARD",
+      "toId": "HOUNDSTONE"
+    },
+    {
+      "fromId": "GRIMER",
+      "toId": "MUK"
+    },
+    {
+      "fromId": "GRIMER_1",
+      "toId": "MUK_1"
+    },
+    {
+      "fromId": "GROOKEY",
+      "toId": "THWACKEY"
+    },
+    {
+      "fromId": "GROTLE",
+      "toId": "TORTERRA"
+    },
+    {
+      "fromId": "GROVYLE",
+      "toId": "SCEPTILE"
+    },
+    {
+      "fromId": "GROWLITHE",
+      "toId": "ARCANINE"
+    },
+    {
+      "fromId": "GROWLITHE_1",
+      "toId": "ARCANINE_1"
+    },
+    {
+      "fromId": "GRUBBIN",
+      "toId": "CHARJABUG"
+    },
+    {
+      "fromId": "GULPIN",
+      "toId": "SWALOT"
+    },
+    {
+      "fromId": "GURDURR",
+      "toId": "CONKELDURR"
+    },
+    {
+      "fromId": "HAKAMOO",
+      "toId": "KOMMOO"
+    },
+    {
+      "fromId": "HAPPINY",
+      "toId": "CHANSEY"
+    },
+    {
+      "fromId": "HATENNA",
+      "toId": "HATTREM"
+    },
+    {
+      "fromId": "HATTREM",
+      "toId": "HATTERENE"
+    },
+    {
+      "fromId": "HAUNTER",
+      "toId": "GENGAR"
+    },
+    {
+      "fromId": "HELIOPTILE",
+      "toId": "HELIOLISK"
+    },
+    {
+      "fromId": "HERDIER",
+      "toId": "STOUTLAND"
+    },
+    {
+      "fromId": "HIPPOPOTAS",
+      "toId": "HIPPOWDON"
+    },
+    {
+      "fromId": "HONEDGE",
+      "toId": "DOUBLADE"
+    },
+    {
+      "fromId": "HOOTHOOT",
+      "toId": "NOCTOWL"
+    },
+    {
+      "fromId": "HOPPIP",
+      "toId": "SKIPLOOM"
+    },
+    {
+      "fromId": "HORSEA",
+      "toId": "SEADRA"
+    },
+    {
+      "fromId": "HOUNDOUR",
+      "toId": "HOUNDOOM"
+    },
+    {
+      "fromId": "IGGLYBUFF",
+      "toId": "JIGGLYPUFF"
+    },
+    {
+      "fromId": "IMPIDIMP",
+      "toId": "MORGREM"
+    },
+    {
+      "fromId": "INKAY",
+      "toId": "MALAMAR"
+    },
+    {
+      "fromId": "IVYSAUR",
+      "toId": "VENUSAUR"
+    },
+    {
+      "fromId": "JANGMOO",
+      "toId": "HAKAMOO"
+    },
+    {
+      "fromId": "JIGGLYPUFF",
+      "toId": "WIGGLYTUFF"
+    },
+    {
+      "fromId": "JOLTIK",
+      "toId": "GALVANTULA"
+    },
+    {
+      "fromId": "KABUTO",
+      "toId": "KABUTOPS"
+    },
+    {
+      "fromId": "KADABRA",
+      "toId": "ALAKAZAM"
+    },
+    {
+      "fromId": "KAKUNA",
+      "toId": "BEEDRILL"
+    },
+    {
+      "fromId": "KARRABLAST",
+      "toId": "ESCAVALIER"
+    },
+    {
+      "fromId": "KIRLIA",
+      "toId": "GALLADE",
+      "requiredSex": "male"
+    },
+    {
+      "fromId": "KIRLIA",
+      "toId": "GARDEVOIR"
+    },
+    {
+      "fromId": "KLANG",
+      "toId": "KLINKLANG"
+    },
+    {
+      "fromId": "KLINK",
+      "toId": "KLANG"
+    },
+    {
+      "fromId": "KOFFING",
+      "toId": "WEEZING"
+    },
+    {
+      "fromId": "KOFFING",
+      "toId": "WEEZING_1"
+    },
+    {
+      "fromId": "KRABBY",
+      "toId": "KINGLER"
+    },
+    {
+      "fromId": "KRICKETOT",
+      "toId": "KRICKETUNE"
+    },
+    {
+      "fromId": "KROKOROK",
+      "toId": "KROOKODILE"
+    },
+    {
+      "fromId": "KUBFU",
+      "toId": "URSHIFU"
+    },
+    {
+      "fromId": "KUBFU",
+      "toId": "URSHIFU_1"
+    },
+    {
+      "fromId": "LAIRON",
+      "toId": "AGGRON"
+    },
+    {
+      "fromId": "LAMPENT",
+      "toId": "CHANDELURE"
+    },
+    {
+      "fromId": "LARVESTA",
+      "toId": "VOLCARONA"
+    },
+    {
+      "fromId": "LARVITAR",
+      "toId": "PUPITAR"
+    },
+    {
+      "fromId": "LECHONK",
+      "toId": "OINKOLOGNE",
+      "requiredSex": "male"
+    },
+    {
+      "fromId": "LECHONK",
+      "toId": "OINKOLOGNE_1",
+      "requiredSex": "female"
+    },
+    {
+      "fromId": "LEDYBA",
+      "toId": "LEDIAN"
+    },
+    {
+      "fromId": "LICKITUNG",
+      "toId": "LICKILICKY"
+    },
+    {
+      "fromId": "LILEEP",
+      "toId": "CRADILY"
+    },
+    {
+      "fromId": "LILLIPUP",
+      "toId": "HERDIER"
+    },
+    {
+      "fromId": "LINOONE_1",
+      "toId": "OBSTAGOON"
+    },
+    {
+      "fromId": "LITLEO",
+      "toId": "PYROAR"
+    },
+    {
+      "fromId": "LITTEN",
+      "toId": "TORRACAT"
+    },
+    {
+      "fromId": "LITWICK",
+      "toId": "LAMPENT"
+    },
+    {
+      "fromId": "LOMBRE",
+      "toId": "LUDICOLO"
+    },
+    {
+      "fromId": "LOTAD",
+      "toId": "LOMBRE"
+    },
+    {
+      "fromId": "LOUDRED",
+      "toId": "EXPLOUD"
+    },
+    {
+      "fromId": "LUXIO",
+      "toId": "LUXRAY"
+    },
+    {
+      "fromId": "MACHOKE",
+      "toId": "MACHAMP"
+    },
+    {
+      "fromId": "MACHOP",
+      "toId": "MACHOKE"
+    },
+    {
+      "fromId": "MAGBY",
+      "toId": "MAGMAR"
+    },
+    {
+      "fromId": "MAGIKARP",
+      "toId": "GYARADOS"
+    },
+    {
+      "fromId": "MAGMAR",
+      "toId": "MAGMORTAR"
+    },
+    {
+      "fromId": "MAGNEMITE",
+      "toId": "MAGNETON"
+    },
+    {
+      "fromId": "MAGNETON",
+      "toId": "MAGNEZONE"
+    },
+    {
+      "fromId": "MAKUHITA",
+      "toId": "HARIYAMA"
+    },
+    {
+      "fromId": "MANKEY",
+      "toId": "PRIMEAPE"
+    },
+    {
+      "fromId": "MANTYKE",
+      "toId": "MANTINE"
+    },
+    {
+      "fromId": "MAREANIE",
+      "toId": "TOXAPEX"
+    },
+    {
+      "fromId": "MAREEP",
+      "toId": "FLAAFFY"
+    },
+    {
+      "fromId": "MARILL",
+      "toId": "AZUMARILL"
+    },
+    {
+      "fromId": "MARSHTOMP",
+      "toId": "SWAMPERT"
+    },
+    {
+      "fromId": "MASCHIFF",
+      "toId": "MABOSSTIFF"
+    },
+    {
+      "fromId": "MEDITITE",
+      "toId": "MEDICHAM"
+    },
+    {
+      "fromId": "MELTAN",
+      "toId": "MELMETAL"
+    },
+    {
+      "fromId": "MEOWTH",
+      "toId": "PERSIAN"
+    },
+    {
+      "fromId": "MEOWTH_1",
+      "toId": "PERSIAN_1"
+    },
+    {
+      "fromId": "MEOWTH_2",
+      "toId": "PERRSERKER"
+    },
+    {
+      "fromId": "METANG",
+      "toId": "METAGROSS"
+    },
+    {
+      "fromId": "METAPOD",
+      "toId": "BUTTERFREE"
+    },
+    {
+      "fromId": "MIENFOO",
+      "toId": "MIENSHAO"
+    },
+    {
+      "fromId": "MILCERY",
+      "toId": "ALCREMIE"
+    },
+    {
+      "fromId": "MIMEJR",
+      "toId": "MRMIME"
+    },
+    {
+      "fromId": "MIMEJR",
+      "toId": "MRMIME_1"
+    },
+    {
+      "fromId": "MINCCINO",
+      "toId": "CINCCINO"
+    },
+    {
+      "fromId": "MISDREAVUS",
+      "toId": "MISMAGIUS"
+    },
+    {
+      "fromId": "MONFERNO",
+      "toId": "INFERNAPE"
+    },
+    {
+      "fromId": "MORELULL",
+      "toId": "SHIINOTIC"
+    },
+    {
+      "fromId": "MORGREM",
+      "toId": "GRIMMSNARL"
+    },
+    {
+      "fromId": "MRMIME_1",
+      "toId": "MRRIME"
+    },
+    {
+      "fromId": "MUDBRAY",
+      "toId": "MUDSDALE"
+    },
+    {
+      "fromId": "MUDKIP",
+      "toId": "MARSHTOMP"
+    },
+    {
+      "fromId": "MUNCHLAX",
+      "toId": "SNORLAX"
+    },
+    {
+      "fromId": "MUNNA",
+      "toId": "MUSHARNA"
+    },
+    {
+      "fromId": "MURKROW",
+      "toId": "HONCHKROW"
+    },
+    {
+      "fromId": "NACLI",
+      "toId": "NACLSTACK"
+    },
+    {
+      "fromId": "NACLSTACK",
+      "toId": "GARGANACL"
+    },
+    {
+      "fromId": "NATU",
+      "toId": "XATU"
+    },
+    {
+      "fromId": "NICKIT",
+      "toId": "THIEVUL"
+    },
+    {
+      "fromId": "NIDORINA",
+      "toId": "NIDOQUEEN"
+    },
+    {
+      "fromId": "NIDORINO",
+      "toId": "NIDOKING"
+    },
+    {
+      "fromId": "NINCADA",
+      "toId": "NINJASK"
+    },
+    {
+      "fromId": "NINCADA",
+      "toId": "SHEDINJA"
+    },
+    {
+      "fromId": "NOIBAT",
+      "toId": "NOIVERN"
+    },
+    {
+      "fromId": "NOSEPASS",
+      "toId": "PROBOPASS"
+    },
+    {
+      "fromId": "NUMEL",
+      "toId": "CAMERUPT"
+    },
+    {
+      "fromId": "NUZLEAF",
+      "toId": "SHIFTRY"
+    },
+    {
+      "fromId": "NYMBLE",
+      "toId": "LOKIX"
+    },
+    {
+      "fromId": "ODDISH",
+      "toId": "GLOOM"
+    },
+    {
+      "fromId": "OMANYTE",
+      "toId": "OMASTAR"
+    },
+    {
+      "fromId": "ONIX",
+      "toId": "STEELIX"
+    },
+    {
+      "fromId": "OSHAWOTT",
+      "toId": "DEWOTT"
+    },
+    {
+      "fromId": "PALPITOAD",
+      "toId": "SEISMITOAD"
+    },
+    {
+      "fromId": "PANCHAM",
+      "toId": "PANGORO"
+    },
+    {
+      "fromId": "PANPOUR",
+      "toId": "SIMIPOUR"
+    },
+    {
+      "fromId": "PANSAGE",
+      "toId": "SIMISAGE"
+    },
+    {
+      "fromId": "PANSEAR",
+      "toId": "SIMISEAR"
+    },
+    {
+      "fromId": "PARAS",
+      "toId": "PARASECT"
+    },
+    {
+      "fromId": "PATRAT",
+      "toId": "WATCHOG"
+    },
+    {
+      "fromId": "PAWMI",
+      "toId": "PAWMO"
+    },
+    {
+      "fromId": "PAWMO",
+      "toId": "PAWMOT"
+    },
+    {
+      "fromId": "PAWNIARD",
+      "toId": "BISHARP"
+    },
+    {
+      "fromId": "PETILIL",
+      "toId": "LILLIGANT"
+    },
+    {
+      "fromId": "PETILIL",
+      "toId": "LILLIGANT_1"
+    },
+    {
+      "fromId": "PHANPY",
+      "toId": "DONPHAN"
+    },
+    {
+      "fromId": "PHANTUMP",
+      "toId": "TREVENANT"
+    },
+    {
+      "fromId": "PICHU",
+      "toId": "PIKACHU"
+    },
+    {
+      "fromId": "PIDGEOTTO",
+      "toId": "PIDGEOT"
+    },
+    {
+      "fromId": "PIDGEY",
+      "toId": "PIDGEOTTO"
+    },
+    {
+      "fromId": "PIDOVE",
+      "toId": "TRANQUILL"
+    },
+    {
+      "fromId": "PIGNITE",
+      "toId": "EMBOAR"
+    },
+    {
+      "fromId": "PIKACHU",
+      "toId": "RAICHU"
+    },
+    {
+      "fromId": "PIKACHU",
+      "toId": "RAICHU_1"
+    },
+    {
+      "fromId": "PIKIPEK",
+      "toId": "TRUMBEAK"
+    },
+    {
+      "fromId": "PILOSWINE",
+      "toId": "MAMOSWINE"
+    },
+    {
+      "fromId": "PINECO",
+      "toId": "FORRETRESS"
+    },
+    {
+      "fromId": "PIPLUP",
+      "toId": "PRINPLUP"
+    },
+    {
+      "fromId": "POIPOLE",
+      "toId": "NAGANADEL"
+    },
+    {
+      "fromId": "POLIWAG",
+      "toId": "POLIWHIRL"
+    },
+    {
+      "fromId": "POLIWHIRL",
+      "toId": "POLITOED"
+    },
+    {
+      "fromId": "POLIWHIRL",
+      "toId": "POLIWRATH"
+    },
+    {
+      "fromId": "POLTCHAGEIST",
+      "toId": "SINISTCHA"
+    },
+    {
+      "fromId": "PONYTA",
+      "toId": "RAPIDASH"
+    },
+    {
+      "fromId": "PONYTA_1",
+      "toId": "RAPIDASH_1"
+    },
+    {
+      "fromId": "POOCHYENA",
+      "toId": "MIGHTYENA"
+    },
+    {
+      "fromId": "POPPLIO",
+      "toId": "BRIONNE"
+    },
+    {
+      "fromId": "PORYGON",
+      "toId": "PORYGON2"
+    },
+    {
+      "fromId": "PORYGON2",
+      "toId": "PORYGONZ"
+    },
+    {
+      "fromId": "PRIMEAPE",
+      "toId": "ANNIHILAPE"
+    },
+    {
+      "fromId": "PRINPLUP",
+      "toId": "EMPOLEON"
+    },
+    {
+      "fromId": "PSYDUCK",
+      "toId": "GOLDUCK"
+    },
+    {
+      "fromId": "PUMPKABOO",
+      "toId": "GOURGEIST"
+    },
+    {
+      "fromId": "PUPITAR",
+      "toId": "TYRANITAR"
+    },
+    {
+      "fromId": "PURRLOIN",
+      "toId": "LIEPARD"
+    },
+    {
+      "fromId": "QUAXLY",
+      "toId": "QUAXWELL"
+    },
+    {
+      "fromId": "QUAXWELL",
+      "toId": "QUAQUAVAL"
+    },
+    {
+      "fromId": "QUILAVA",
+      "toId": "TYPHLOSION"
+    },
+    {
+      "fromId": "QUILAVA",
+      "toId": "TYPHLOSION_1"
+    },
+    {
+      "fromId": "QUILLADIN",
+      "toId": "CHESNAUGHT"
+    },
+    {
+      "fromId": "QWILFISH_1",
+      "toId": "OVERQWIL"
+    },
+    {
+      "fromId": "RABOOT",
+      "toId": "CINDERACE"
+    },
+    {
+      "fromId": "RALTS",
+      "toId": "KIRLIA"
+    },
+    {
+      "fromId": "RATTATA",
+      "toId": "RATICATE"
+    },
+    {
+      "fromId": "RATTATA_1",
+      "toId": "RATICATE_1"
+    },
+    {
+      "fromId": "RELLOR",
+      "toId": "RABSCA"
+    },
+    {
+      "fromId": "REMORAID",
+      "toId": "OCTILLERY"
+    },
+    {
+      "fromId": "RHYDON",
+      "toId": "RHYPERIOR"
+    },
+    {
+      "fromId": "RHYHORN",
+      "toId": "RHYDON"
+    },
+    {
+      "fromId": "RIOLU",
+      "toId": "LUCARIO"
+    },
+    {
+      "fromId": "ROCKRUFF",
+      "toId": "LYCANROC"
+    },
+    {
+      "fromId": "ROCKRUFF",
+      "toId": "LYCANROC_1"
+    },
+    {
+      "fromId": "ROGGENROLA",
+      "toId": "BOLDORE"
+    },
+    {
+      "fromId": "ROLYCOLY",
+      "toId": "CARKOL"
+    },
+    {
+      "fromId": "ROOKIDEE",
+      "toId": "CORVISQUIRE"
+    },
+    {
+      "fromId": "ROSELIA",
+      "toId": "ROSERADE"
+    },
+    {
+      "fromId": "ROWLET",
+      "toId": "DARTRIX"
+    },
+    {
+      "fromId": "RUFFLET",
+      "toId": "BRAVIARY"
+    },
+    {
+      "fromId": "RUFFLET",
+      "toId": "BRAVIARY_1"
+    },
+    {
+      "fromId": "SALANDIT",
+      "toId": "SALAZZLE",
+      "requiredSex": "female"
+    },
+    {
+      "fromId": "SANDILE",
+      "toId": "KROKOROK"
+    },
+    {
+      "fromId": "SANDSHREW",
+      "toId": "SANDSLASH"
+    },
+    {
+      "fromId": "SANDSHREW_1",
+      "toId": "SANDSLASH_1"
+    },
+    {
+      "fromId": "SANDYGAST",
+      "toId": "PALOSSAND"
+    },
+    {
+      "fromId": "SCATTERBUG",
+      "toId": "SPEWPA"
+    },
+    {
+      "fromId": "SCORBUNNY",
+      "toId": "RABOOT"
+    },
+    {
+      "fromId": "SCRAGGY",
+      "toId": "SCRAFTY"
+    },
+    {
+      "fromId": "SCYTHER",
+      "toId": "KLEAVOR"
+    },
+    {
+      "fromId": "SCYTHER",
+      "toId": "SCIZOR"
+    },
+    {
+      "fromId": "SEADRA",
+      "toId": "KINGDRA"
+    },
+    {
+      "fromId": "SEALEO",
+      "toId": "WALREIN"
+    },
+    {
+      "fromId": "SEEDOT",
+      "toId": "NUZLEAF"
+    },
+    {
+      "fromId": "SEEL",
+      "toId": "DEWGONG"
+    },
+    {
+      "fromId": "SENTRET",
+      "toId": "FURRET"
+    },
+    {
+      "fromId": "SERVINE",
+      "toId": "SERPERIOR"
+    },
+    {
+      "fromId": "SEWADDLE",
+      "toId": "SWADLOON"
+    },
+    {
+      "fromId": "SHELGON",
+      "toId": "SALAMENCE"
+    },
+    {
+      "fromId": "SHELLDER",
+      "toId": "CLOYSTER"
+    },
+    {
+      "fromId": "SHELLOS",
+      "toId": "GASTRODON"
+    },
+    {
+      "fromId": "SHELLOS_1",
+      "toId": "GASTRODON_1"
+    },
+    {
+      "fromId": "SHELMET",
+      "toId": "ACCELGOR"
+    },
+    {
+      "fromId": "SHIELDON",
+      "toId": "BASTIODON"
+    },
+    {
+      "fromId": "SHINX",
+      "toId": "LUXIO"
+    },
+    {
+      "fromId": "SHROODLE",
+      "toId": "GRAFAIAI"
+    },
+    {
+      "fromId": "SHROOMISH",
+      "toId": "BRELOOM"
+    },
+    {
+      "fromId": "SHUPPET",
+      "toId": "BANETTE"
+    },
+    {
+      "fromId": "SILCOON",
+      "toId": "BEAUTIFLY"
+    },
+    {
+      "fromId": "SILICOBRA",
+      "toId": "SANDACONDA"
+    },
+    {
+      "fromId": "SINISTEA",
+      "toId": "POLTEAGEIST"
+    },
+    {
+      "fromId": "SIZZLIPEDE",
+      "toId": "CENTISKORCH"
+    },
+    {
+      "fromId": "SKIDDO",
+      "toId": "GOGOAT"
+    },
+    {
+      "fromId": "SKIPLOOM",
+      "toId": "JUMPLUFF"
+    },
+    {
+      "fromId": "SKITTY",
+      "toId": "DELCATTY"
+    },
+    {
+      "fromId": "SKORUPI",
+      "toId": "DRAPION"
+    },
+    {
+      "fromId": "SKRELP",
+      "toId": "DRAGALGE"
+    },
+    {
+      "fromId": "SKWOVET",
+      "toId": "GREEDENT"
+    },
+    {
+      "fromId": "SLAKOTH",
+      "toId": "VIGOROTH"
+    },
+    {
+      "fromId": "SLIGGOO",
+      "toId": "GOODRA"
+    },
+    {
+      "fromId": "SLIGGOO_1",
+      "toId": "GOODRA_1"
+    },
+    {
+      "fromId": "SLOWPOKE",
+      "toId": "SLOWBRO"
+    },
+    {
+      "fromId": "SLOWPOKE",
+      "toId": "SLOWKING"
+    },
+    {
+      "fromId": "SLOWPOKE_1",
+      "toId": "SLOWKING_1"
+    },
+    {
+      "fromId": "SLUGMA",
+      "toId": "MAGCARGO"
+    },
+    {
+      "fromId": "SMOLIV",
+      "toId": "DOLLIV"
+    },
+    {
+      "fromId": "SMOOCHUM",
+      "toId": "JYNX"
+    },
+    {
+      "fromId": "SNEASEL",
+      "toId": "WEAVILE"
+    },
+    {
+      "fromId": "SNEASEL_1",
+      "toId": "SNEASLER"
+    },
+    {
+      "fromId": "SNIVY",
+      "toId": "SERVINE"
+    },
+    {
+      "fromId": "SNOM",
+      "toId": "FROSMOTH"
+    },
+    {
+      "fromId": "SNORUNT",
+      "toId": "FROSLASS",
+      "requiredSex": "female"
+    },
+    {
+      "fromId": "SNORUNT",
+      "toId": "GLALIE"
+    },
+    {
+      "fromId": "SNOVER",
+      "toId": "ABOMASNOW"
+    },
+    {
+      "fromId": "SNUBBULL",
+      "toId": "GRANBULL"
+    },
+    {
+      "fromId": "SOBBLE",
+      "toId": "DRIZZILE"
+    },
+    {
+      "fromId": "SOLOSIS",
+      "toId": "DUOSION"
+    },
+    {
+      "fromId": "SPEAROW",
+      "toId": "FEAROW"
+    },
+    {
+      "fromId": "SPEWPA",
+      "toId": "VIVILLON"
+    },
+    {
+      "fromId": "SPHEAL",
+      "toId": "SEALEO"
+    },
+    {
+      "fromId": "SPINARAK",
+      "toId": "ARIADOS"
+    },
+    {
+      "fromId": "SPOINK",
+      "toId": "GRUMPIG"
+    },
+    {
+      "fromId": "SPRIGATITO",
+      "toId": "FLORAGATO"
+    },
+    {
+      "fromId": "SPRITZEE",
+      "toId": "AROMATISSE"
+    },
+    {
+      "fromId": "SQUIRTLE",
+      "toId": "WARTORTLE"
+    },
+    {
+      "fromId": "STANTLER",
+      "toId": "WYRDEER"
+    },
+    {
+      "fromId": "STARAVIA",
+      "toId": "STARAPTOR"
+    },
+    {
+      "fromId": "STARLY",
+      "toId": "STARAVIA"
+    },
+    {
+      "fromId": "STARYU",
+      "toId": "STARMIE"
+    },
+    {
+      "fromId": "STEENEE",
+      "toId": "TSAREENA"
+    },
+    {
+      "fromId": "STUFFUL",
+      "toId": "BEWEAR"
+    },
+    {
+      "fromId": "STUNKY",
+      "toId": "SKUNTANK"
+    },
+    {
+      "fromId": "SUNKERN",
+      "toId": "SUNFLORA"
+    },
+    {
+      "fromId": "SURSKIT",
+      "toId": "MASQUERAIN"
+    },
+    {
+      "fromId": "SWABLU",
+      "toId": "ALTARIA"
+    },
+    {
+      "fromId": "SWADLOON",
+      "toId": "LEAVANNY"
+    },
+    {
+      "fromId": "SWINUB",
+      "toId": "PILOSWINE"
+    },
+    {
+      "fromId": "SWIRLIX",
+      "toId": "SLURPUFF"
+    },
+    {
+      "fromId": "TADBULB",
+      "toId": "BELLIBOLT"
+    },
+    {
+      "fromId": "TAILLOW",
+      "toId": "SWELLOW"
+    },
+    {
+      "fromId": "TANDEMAUS",
+      "toId": "MAUSHOLD"
+    },
+    {
+      "fromId": "TANDEMAUS",
+      "toId": "MAUSHOLD_1"
+    },
+    {
+      "fromId": "TANGELA",
+      "toId": "TANGROWTH"
+    },
+    {
+      "fromId": "TAROUNTULA",
+      "toId": "SPIDOPS"
+    },
+    {
+      "fromId": "TEDDIURSA",
+      "toId": "URSARING"
+    },
+    {
+      "fromId": "TENTACOOL",
+      "toId": "TENTACRUEL"
+    },
+    {
+      "fromId": "TEPIG",
+      "toId": "PIGNITE"
+    },
+    {
+      "fromId": "THWACKEY",
+      "toId": "RILLABOOM"
+    },
+    {
+      "fromId": "TIMBURR",
+      "toId": "GURDURR"
+    },
+    {
+      "fromId": "TINKATINK",
+      "toId": "TINKATUFF"
+    },
+    {
+      "fromId": "TINKATUFF",
+      "toId": "TINKATON"
+    },
+    {
+      "fromId": "TIRTOUGA",
+      "toId": "CARRACOSTA"
+    },
+    {
+      "fromId": "TOEDSCOOL",
+      "toId": "TOEDSCRUEL"
+    },
+    {
+      "fromId": "TOGEPI",
+      "toId": "TOGETIC"
+    },
+    {
+      "fromId": "TOGETIC",
+      "toId": "TOGEKISS"
+    },
+    {
+      "fromId": "TORCHIC",
+      "toId": "COMBUSKEN"
+    },
+    {
+      "fromId": "TORRACAT",
+      "toId": "INCINEROAR"
+    },
+    {
+      "fromId": "TOTODILE",
+      "toId": "CROCONAW"
+    },
+    {
+      "fromId": "TOXEL",
+      "toId": "TOXTRICITY"
+    },
+    {
+      "fromId": "TOXEL",
+      "toId": "TOXTRICITY_1"
+    },
+    {
+      "fromId": "TRANQUILL",
+      "toId": "UNFEZANT"
+    },
+    {
+      "fromId": "TRAPINCH",
+      "toId": "VIBRAVA"
+    },
+    {
+      "fromId": "TREECKO",
+      "toId": "GROVYLE"
+    },
+    {
+      "fromId": "TRUBBISH",
+      "toId": "GARBODOR"
+    },
+    {
+      "fromId": "TRUMBEAK",
+      "toId": "TOUCANNON"
+    },
+    {
+      "fromId": "TURTWIG",
+      "toId": "GROTLE"
+    },
+    {
+      "fromId": "TYMPOLE",
+      "toId": "PALPITOAD"
+    },
+    {
+      "fromId": "TYNAMO",
+      "toId": "EELEKTRIK"
+    },
+    {
+      "fromId": "TYPENULL",
+      "toId": "SILVALLY"
+    },
+    {
+      "fromId": "TYROGUE",
+      "toId": "HITMONCHAN"
+    },
+    {
+      "fromId": "TYROGUE",
+      "toId": "HITMONLEE"
+    },
+    {
+      "fromId": "TYROGUE",
+      "toId": "HITMONTOP"
+    },
+    {
+      "fromId": "TYRUNT",
+      "toId": "TYRANTRUM"
+    },
+    {
+      "fromId": "URSARING",
+      "toId": "URSALUNA"
+    },
+    {
+      "fromId": "VANILLISH",
+      "toId": "VANILLUXE"
+    },
+    {
+      "fromId": "VANILLITE",
+      "toId": "VANILLISH"
+    },
+    {
+      "fromId": "VAROOM",
+      "toId": "REVAVROOM"
+    },
+    {
+      "fromId": "VENIPEDE",
+      "toId": "WHIRLIPEDE"
+    },
+    {
+      "fromId": "VENONAT",
+      "toId": "VENOMOTH"
+    },
+    {
+      "fromId": "VIBRAVA",
+      "toId": "FLYGON"
+    },
+    {
+      "fromId": "VIGOROTH",
+      "toId": "SLAKING"
+    },
+    {
+      "fromId": "VOLTORB",
+      "toId": "ELECTRODE"
+    },
+    {
+      "fromId": "VOLTORB_1",
+      "toId": "ELECTRODE_1"
+    },
+    {
+      "fromId": "VULLABY",
+      "toId": "MANDIBUZZ"
+    },
+    {
+      "fromId": "VULPIX",
+      "toId": "NINETALES"
+    },
+    {
+      "fromId": "VULPIX_1",
+      "toId": "NINETALES_1"
+    },
+    {
+      "fromId": "WAILMER",
+      "toId": "WAILORD"
+    },
+    {
+      "fromId": "WARTORTLE",
+      "toId": "BLASTOISE"
+    },
+    {
+      "fromId": "WATTREL",
+      "toId": "KILOWATTREL"
+    },
+    {
+      "fromId": "WEEDLE",
+      "toId": "KAKUNA"
+    },
+    {
+      "fromId": "WEEPINBELL",
+      "toId": "VICTREEBEL"
+    },
+    {
+      "fromId": "WHIRLIPEDE",
+      "toId": "SCOLIPEDE"
+    },
+    {
+      "fromId": "WHISMUR",
+      "toId": "LOUDRED"
+    },
+    {
+      "fromId": "WIGLETT",
+      "toId": "WUGTRIO"
+    },
+    {
+      "fromId": "WIMPOD",
+      "toId": "GOLISOPOD"
+    },
+    {
+      "fromId": "WINGULL",
+      "toId": "PELIPPER"
+    },
+    {
+      "fromId": "WOOBAT",
+      "toId": "SWOOBAT"
+    },
+    {
+      "fromId": "WOOLOO",
+      "toId": "DUBWOOL"
+    },
+    {
+      "fromId": "WOOPER",
+      "toId": "QUAGSIRE"
+    },
+    {
+      "fromId": "WOOPER_1",
+      "toId": "CLODSIRE"
+    },
+    {
+      "fromId": "WURMPLE",
+      "toId": "CASCOON"
+    },
+    {
+      "fromId": "WURMPLE",
+      "toId": "SILCOON"
+    },
+    {
+      "fromId": "WYNAUT",
+      "toId": "WOBBUFFET"
+    },
+    {
+      "fromId": "YAMASK",
+      "toId": "COFAGRIGUS"
+    },
+    {
+      "fromId": "YAMASK_1",
+      "toId": "RUNERIGUS"
+    },
+    {
+      "fromId": "YAMPER",
+      "toId": "BOLTUND"
+    },
+    {
+      "fromId": "YANMA",
+      "toId": "YANMEGA"
+    },
+    {
+      "fromId": "YUNGOOS",
+      "toId": "GUMSHOOS"
+    },
+    {
+      "fromId": "ZIGZAGOON",
+      "toId": "LINOONE"
+    },
+    {
+      "fromId": "ZIGZAGOON_1",
+      "toId": "LINOONE_1"
+    },
+    {
+      "fromId": "ZORUA",
+      "toId": "ZOROARK"
+    },
+    {
+      "fromId": "ZORUA_1",
+      "toId": "ZOROARK_1"
+    },
+    {
+      "fromId": "ZUBAT",
+      "toId": "GOLBAT"
+    },
+    {
+      "fromId": "ZWEILOUS",
+      "toId": "HYDREIGON"
+    },
+    {
+      "fromId": "SLOWPOKE_1",
+      "toId": "SLOWBRO_1"
+    }
+  ]
+}
