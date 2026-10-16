@@ -30,17 +30,3 @@ En PokéGrass, los Pokémon no son simples mascotas decorativas. Pueden sorprend
 
 *PokéGrass es un proyecto independiente creado por fans y no está afiliado, respaldado ni patrocinado por Nintendo, Game Freak o The Pokémon Company. Pokémon y sus personajes pertenecen a sus respectivos titulares.*
 
-## Compilar
-
-Requiere Windows y .NET 10 SDK:
-
-```powershell
-dotnet restore src/PokeGrass.App/PokeGrass.App.csproj
-dotnet build src/PokeGrass.App/PokeGrass.App.csproj -c Release
-```
-
-## Instalar y actualizar
-
-Consulta [la guía de distribución](docs/DISTRIBUCION.md) para generar el instalador, crear Releases, publicar actualizaciones y recuperar copias de seguridad. El informe de publicación y recursos está en [INFORME_TAMANO.md](docs/INFORME_TAMANO.md).
-
-Las partidas y preferencias se guardan en `%LOCALAPPDATA%\\PokéGrass`, fuera de la instalación. No publiques archivos de guardado ni el contenido de `publish/` o `Releases/` en el repositorio.
