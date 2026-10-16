@@ -62,7 +62,7 @@ jobs:
           $global:LASTEXITCODE = 0
 
       - name: Create installer and update packages
-        run: vpk pack --packId PokeGrass --packVersion $env:APP_VERSION --packDir publish --mainExe PokéGrass.exe --packTitle PokéGrass --packAuthors Joaqx3wa --icon assets/ui/pokegrass-masterball.ico --runtime win-x64 --outputDir Releases
+        run: vpk pack --packId PokeGrass --packVersion $env:APP_VERSION --packDir publish --mainExe PokéGrass.exe --packTitle PokéGrass --packAuthors Joaqx3wa --icon assets/ui/pokegrass-masterball.ico --runtime win-x64 --releaseNotes $env:RELEASE_NOTES --outputDir Releases
 
       - name: Verify installer and update metadata
         shell: pwsh
@@ -84,7 +84,7 @@ jobs:
       - name: Publish GitHub Release
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: vpk upload github --repoUrl "https://github.com/$env:GITHUB_REPOSITORY" --token $env:GITHUB_TOKEN --publish --pre $env:IS_PRERELEASE --releaseName "$env:RELEASE_NAME" --releaseNotes $env:RELEASE_NOTES --tag $env:GITHUB_REF_NAME --outputDir Releases
+        run: vpk upload github --repoUrl "https://github.com/$env:GITHUB_REPOSITORY" --token $env:GITHUB_TOKEN --publish --pre $env:IS_PRERELEASE --releaseName "$env:RELEASE_NAME" --tag $env:GITHUB_REF_NAME --outputDir Releases
 
       - name: Save package size report
         if: always()
