@@ -293,7 +293,7 @@ internal sealed class DesktopCompanionWindow : Window
     internal bool IsPinned => _pinned;
     internal bool IsBattleParticipant => _battleParticipant;
     internal bool IsBattleCelebrating => _battleCelebrationStartedAt != DateTime.MinValue;
-    internal string CouplesSpeciesId => _speciesMetadata?.Get(BattleMetadataId).SpeciesId ?? BattleMetadataId.ToLowerInvariant();
+    internal string CouplesSpeciesId => _speciesMetadata?.GetForCapture(_capture.Id).SpeciesId ?? _capture.Id.ToLowerInvariant();
     internal string CouplesSex => _speciesMetadata is null ? string.Empty : PokemonSex.Get(_speciesMetadata.GetForCapture(_capture.Id));
     internal bool CanBeginCouples => IsVisible && !_dragPending && !_dragging
         && !_battleParticipant && !_couplesParticipant && !_megaTransformationActive
