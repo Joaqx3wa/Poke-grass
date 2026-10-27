@@ -1385,8 +1385,7 @@ public partial class App : System.Windows.Application
         var capture = save.GetPcSnapshot().Captures.FirstOrDefault(item => item.RecordId == recordId);
         if (capture is null) return false;
         if (megaFormId is not null
-            && (!_megaEvolutions.TryGetForm(megaFormId, out var definition)
-                || !definition.BasePokemonId.Equals(capture.Id, StringComparison.OrdinalIgnoreCase))) return false;
+            && !_megaEvolutions.CanApplyForm(capture, megaFormId)) return false;
         if (!save.SetMegaForm(recordId, megaFormId)) return false;
 
         var companionState = save.GetDesktopCompanions().FirstOrDefault(item => item.RecordId == recordId);

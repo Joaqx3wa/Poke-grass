@@ -92,6 +92,9 @@ internal sealed class MegaEvolutionCatalog
     internal int GetCaptureLimit(string basePokemonId) => Math.Max(1,
         _byBase.TryGetValue(basePokemonId, out var forms) ? forms.Count : 0);
 
+    internal bool CanApplyForm(CapturedPokemon capture, string formId) => GetFormsFor(capture)
+        .Any(form => form.FormId.Equals(formId, StringComparison.OrdinalIgnoreCase));
+
     internal bool TryGetForm(string formId, out MegaEvolutionDefinition form) => _byForm.TryGetValue(formId, out form!);
 
     internal string GetBasePokemonIdForForm(string formId) => _byForm.TryGetValue(formId, out var form)

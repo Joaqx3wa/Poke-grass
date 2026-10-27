@@ -108,7 +108,21 @@ internal static class EncounterGenderSelfTest
             && !megaVenusaur.EncounterNormal.Contains("_female", StringComparison.OrdinalIgnoreCase),
             "Venusaur hembra debe poder megaevolucionar con sprites Mega normales cuando no exista variante femenina.");
 
-        Summary = $"Encounter gender selection: PASS ({catalog.FemaleEncounterVariants.Count} female sprite/fallback variants mapped; Pikachu forms unweighted)";
+        foreach (var id in new[] { "MAWILE", "MAWILE_female", "VENUSAUR_female", "GARCHOMP_female" })
+        {
+            foreach (var shiny in new[] { false, true })
+            foreach (var alpha in new[] { false, true })
+            {
+                var capture = CreateSpeciesCapture($"mega-{id}", metadata.Get(id), shiny, alpha);
+                var forms = megaCatalog.GetFormsFor(capture);
+                Assert(forms.Count > 0 && forms.All(form => megaCatalog.CanApplyForm(capture, form.FormId)),
+                    $"La validación efectiva de Mega debe aceptar {id}, shiny={shiny}, Alfa={alpha}.");
+                Assert(!megaCatalog.CanApplyForm(capture, "CHARIZARD_1") && capture.Id == id,
+                    "La Mega debe conservar el ID/sexo y rechazar formas de otra especie.");
+            }
+        }
+
+        Summary = $"Encounter gender selection: PASS ({catalog.FemaleEncounterVariants.Count} female sprite/fallback variants mapped; Pikachu forms unweighted; male/female Mega eligibility verified)";
     }
 
     private static PokemonEntry Select(PokemonEntry candidate, IReadOnlyList<CapturedPokemon> captures,
@@ -126,14 +140,15 @@ internal static class EncounterGenderSelfTest
         CapturedAt = DateTimeOffset.UtcNow
     };
 
-    private static CapturedPokemon CreateSpeciesCapture(string recordId, PokemonSpeciesMetadata metadata) => new()
+    private static CapturedPokemon CreateSpeciesCapture(string recordId, PokemonSpeciesMetadata metadata,
+        bool shiny = true, bool alpha = true) => new()
     {
         RecordId = recordId,
         Id = metadata.Id,
         SpeciesId = metadata.SpeciesId,
         Form = metadata.Form,
-        IsShiny = true,
-        IsAlpha = true,
+        IsShiny = shiny,
+        IsAlpha = alpha,
         CapturedAt = DateTimeOffset.UtcNow
     };
 

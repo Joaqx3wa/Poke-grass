@@ -184,14 +184,16 @@ internal static class CaptureSystemSelfTest
         reloaded.TryRecordCapture(pikachu, true, out var shinyOne);
         reloaded.TryRecordCapture(pikachu, true, out var shinyTwo);
         Assert(!duplicateOne && duplicateTwo && shinyOne && shinyTwo,
-            "Los shiny deben consumir el mismo cupo y los ejemplares que lo excedan se enrutan como duplicados.");
+            "Los shiny duplicados conservan el indicador de duplicado.");
         var persisted = JsonSerializer.Deserialize<GameSaveData>(File.ReadAllText(savePath))!;
-        Assert(persisted.Captures.Count == 1 && persisted.DuplicateCaptureRecords.Count == 3,
+        Assert(persisted.Captures.Count == 3 && persisted.DuplicateCaptureRecords.Count == 1,
             "Las capturas y duplicados deben persistir con la identidad correcta.");
         Assert(persisted.Captures.All(record => !string.IsNullOrWhiteSpace(record.Id)
             && record.CapturedAt != default && !string.IsNullOrWhiteSpace(record.SpeciesId)),
             "Cada captura guardada debe registrar ID, especie y fecha.");
-        Assert(persisted.DuplicateCaptureRecords.Any(record => record.IsShiny), "El estado shiny debe persistir incluso si supera el cupo.");
+        Assert(persisted.Captures.Count(record => record.IsShiny) == 2
+            && persisted.DuplicateCaptureRecords.All(record => !record.IsShiny),
+            "Todos los shiny, incluidos los duplicados, deben permanecer en la PC.");
 
         var megaSavePath = Path.Combine(Path.GetTempPath(), "PokéGrass-mega-test", Guid.NewGuid().ToString("N"), "save.json");
         var megaSave = GameSaveStore.LoadOrCreate(megaSavePath);

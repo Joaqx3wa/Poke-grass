@@ -16,17 +16,28 @@ internal sealed class EncounterAudio : IDisposable
 
     public void PlayEffect(string relativePath)
     {
+        var diagnosticContext = $"audio-effect:{relativePath}";
+        var isAudioTest = string.Equals(relativePath, "sounds/effects/ui_click_back.mp3", StringComparison.OrdinalIgnoreCase);
         try
         {
             var volume = GameSoundSettings.EffectiveVolume;
-            if (volume <= 0) return;
+            if (volume <= 0)
+            {
+                if (isAudioTest) EncounterDiagnostics.Write(diagnosticContext, $"Playback skipped; enabled={GameSoundSettings.Enabled}; volume={GameSoundSettings.Volume}%");
+                return;
+            }
             var path = Asset(relativePath);
-            if (!File.Exists(path)) return;
-            StartPlayback(path, volume, temporaryFile: null, $"audio-effect:{relativePath}");
+            if (!File.Exists(path))
+            {
+                if (isAudioTest) EncounterDiagnostics.Write(diagnosticContext, $"Playback skipped; file missing: {path}");
+                return;
+            }
+            if (isAudioTest) EncounterDiagnostics.Write(diagnosticContext, $"Opening test sound; volume={volume:P0}; path={path}");
+            StartPlayback(path, volume, temporaryFile: null, diagnosticContext);
         }
         catch (Exception exception)
         {
-            EncounterDiagnostics.WriteException($"audio-effect:{relativePath}", exception);
+            EncounterDiagnostics.WriteException(diagnosticContext, exception);
         }
     }
 
@@ -111,6 +122,20 @@ internal sealed class EncounterAudio : IDisposable
             if (temporaryFile is not null) _temporaryFiles.Add(temporaryFile);
         }
 
+        player.MediaOpened += (_, _) =>
+        {
+            try
+            {
+                player.Play();
+                if (diagnosticContext == "audio-effect:sounds/effects/ui_click_back.mp3")
+                    EncounterDiagnostics.Write(diagnosticContext, "Media opened; playback started.");
+            }
+            catch (Exception exception)
+            {
+                EncounterDiagnostics.WriteException(diagnosticContext, exception);
+                FinishPlayback(player, temporaryFile);
+            }
+        };
         player.MediaEnded += (_, _) => FinishPlayback(player, temporaryFile);
         player.MediaFailed += (_, args) =>
         {
@@ -121,7 +146,6 @@ internal sealed class EncounterAudio : IDisposable
         try
         {
             player.Open(new Uri(path, UriKind.Absolute));
-            player.Play();
         }
         catch
         {

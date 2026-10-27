@@ -355,9 +355,10 @@ internal sealed class GameSaveStore
         var migratedSlowbro = migrateMegaSlowbro && MigrateLegacySlowbroMega(loaded.Captures.Concat(loaded.DuplicateCaptureRecords));
         var loadedStore = new GameSaveStore(path, loaded, captureLimitPolicy);
         var migratedPc = loadedStore.EnsurePcStorage();
+        var migratedShinyDuplicates = loadedStore.MigrateShinyDuplicateCaptures();
         var migratedDittoDuplicates = loadedStore.MigrateDittoDuplicateCaptures();
         var migratedCompanions = loadedStore.EnsureDesktopCompanions(migrateTeamSlots);
-        if (migratedItems || migratedPc || migratedDittoDuplicates || migratedCompanions || migratedSlowbro || migrateMegaSlowbro)
+        if (migratedItems || migratedPc || migratedShinyDuplicates || migratedDittoDuplicates || migratedCompanions || migratedSlowbro || migrateMegaSlowbro)
         {
             try { SaveBackupService.CreateMigrationBackup(path); }
             catch (Exception exception) when (exception is IOException or UnauthorizedAccessException or InvalidDataException)
@@ -495,7 +496,7 @@ internal sealed class GameSaveStore
                 CapturedAt = DateTimeOffset.UtcNow
             };
             duplicate = IsAtCaptureLimit(metadata, alpha);
-            if (duplicate)
+            if (duplicate && !shiny)
                 _data.DuplicateCaptureRecords.Add(record);
             else
             {
@@ -525,7 +526,7 @@ internal sealed class GameSaveStore
                 RecordId = Guid.NewGuid().ToString("N"), Id = metadata.Id, SpeciesId = metadata.SpeciesId,
                 Form = metadata.Form, IsShiny = shiny, IsAlpha = alpha, CapturedAt = DateTimeOffset.UtcNow
             };
-            if (duplicate) _data.DuplicateCaptureRecords.Add(record);
+            if (duplicate && !shiny) _data.DuplicateCaptureRecords.Add(record);
             else { PlaceInFirstFreeSlot(record); _data.Captures.Add(record); }
 
             var rewards = balance.MakeCaptureRewards(duplicate, shiny, shinyDuplicate, rarity, random ?? Random.Shared).ToList();
@@ -563,6 +564,21 @@ internal sealed class GameSaveStore
             PlaceInFirstFreeSlot(capture);
             _data.Captures.Add(capture);
             _data.DuplicateCaptureRecords.Remove(capture);
+        }
+        return true;
+    }
+
+    private bool MigrateShinyDuplicateCaptures()
+    {
+        var shinyDuplicates = _data.DuplicateCaptureRecords.Where(capture => capture.IsShiny).ToArray();
+        if (shinyDuplicates.Length == 0) return false;
+
+        foreach (var capture in shinyDuplicates)
+        {
+            _data.DuplicateCaptureRecords.Remove(capture);
+            if (_data.Captures.Any(existing => existing.RecordId == capture.RecordId)) continue;
+            PlaceInFirstFreeSlot(capture);
+            _data.Captures.Add(capture);
         }
         return true;
     }

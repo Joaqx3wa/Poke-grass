@@ -43,8 +43,8 @@ internal static class CaptureLimitSelfTest
             genderSave.TryRecordCapture(wobbuffet, true, out var maleTwoDuplicate);
             genderSave.TryRecordCapture(femaleWobbuffet, true, out var femaleTwoDuplicate);
             Assert(!maleOneDuplicate && !femaleOneDuplicate && maleTwoDuplicate && femaleTwoDuplicate
-                && genderSave.GetPcSnapshot().Captures.Count == 2,
-                "Wobbuffet debe permitir un macho y una hembra; el shiny consume el cupo de cada variante.");
+                && genderSave.GetPcSnapshot().Captures.Count == 4,
+                "Wobbuffet conserva macho y hembra, y guarda los shiny aunque superen el cupo.");
 
             var alphaSavePath = Path.Combine(root, "alpha.json");
             var alphaSave = GameSaveStore.LoadOrCreate(alphaSavePath, policy);
@@ -53,11 +53,11 @@ internal static class CaptureLimitSelfTest
             alphaSave.TryRecordCapture(pikachu, false, out var alphaDuplicate, alpha: true);
             alphaSave.TryRecordCapture(pikachu, true, out var alphaShinyDuplicate, alpha: true);
             Assert(!normalDuplicate && !alphaDuplicate && alphaShinyDuplicate,
-                "Los cupos normales y Alfa deben ser independientes; shiny Alfa comparte el cupo Alfa.");
+                "Los cupos normales y Alfa deben ser independientes, y el shiny Alfa debe marcarse duplicado.");
             var persistedAlpha = GameSaveStore.LoadOrCreate(alphaSavePath, policy).GetPcSnapshot().Captures;
-            Assert(persistedAlpha.Count == 2 && persistedAlpha.Count(capture => capture.IsAlpha) == 1
-                && persistedAlpha.Single(capture => capture.IsAlpha).IsShiny == false,
-                "El atributo Alfa y su cupo independiente deben persistir al reiniciar.");
+            Assert(persistedAlpha.Count == 3 && persistedAlpha.Count(capture => capture.IsAlpha) == 2
+                && persistedAlpha.Any(capture => capture.IsAlpha && capture.IsShiny),
+                "El shiny Alfa debe permanecer en la PC al superar el cupo y al reiniciar.");
 
             var alphaCharizardSave = GameSaveStore.LoadOrCreate(Path.Combine(root, "alpha-charizard.json"), policy);
             alphaCharizardSave.TryRecordCapture(metadata.Get("CHARIZARD"), false, out var alphaCharizardOneDuplicate, alpha: true);
@@ -79,8 +79,9 @@ internal static class CaptureLimitSelfTest
             var ordinarySave = GameSaveStore.LoadOrCreate(Path.Combine(root, "ordinary.json"), policy);
             ordinarySave.TryRecordCapture(metadata.Get("PIKACHU"), false, out var pikachuOneDuplicate);
             ordinarySave.TryRecordCapture(metadata.Get("PIKACHU"), true, out var pikachuShinyDuplicate);
-            Assert(!pikachuOneDuplicate && pikachuShinyDuplicate && ordinarySave.GetPcSnapshot().Captures.Count == 1,
-                "Una especie sin Mega mantiene un slot compartido por capturas normales y shiny.");
+            Assert(!pikachuOneDuplicate && pikachuShinyDuplicate && ordinarySave.GetPcSnapshot().Captures.Count == 2
+                && ordinarySave.GetPcSnapshot().Captures.Any(capture => capture.IsShiny),
+                "Una especie sin Mega debe guardar también su shiny aunque supere el cupo.");
 
             var formsSave = GameSaveStore.LoadOrCreate(Path.Combine(root, "forms.json"), policy);
             formsSave.TryRecordCapture(metadata.Get("SLOWBRO"), false, out var baseDuplicate);
@@ -88,10 +89,10 @@ internal static class CaptureLimitSelfTest
             formsSave.TryRecordCapture(metadata.Get("SLOWBRO"), true, out var baseSecondDuplicate);
             formsSave.TryRecordCapture(metadata.Get("SLOWBRO_1"), true, out var regionalSecondDuplicate);
             Assert(!baseDuplicate && !regionalDuplicate && baseSecondDuplicate && regionalSecondDuplicate
-                && formsSave.GetPcSnapshot().Captures.Count == 2,
-                "La forma regional conserva un cupo independiente del base y no hereda el cupo Mega.");
+                && formsSave.GetPcSnapshot().Captures.Count == 4,
+                "Las formas conservan cupos independientes y guardan los shiny aunque superen el cupo.");
 
-            Summary = "Cupos: dos Charizard por cada clase normal/Alfa, shiny comparte cupo; Alfa independiente y persistente; variantes visuales de género y regionales independientes.";
+            Summary = "Cupos: dos Charizard por clase normal/Alfa; todos los shiny se guardan también al superar el cupo; Alfa y variantes de género/regionales mantienen cupos independientes.";
         }
         finally
         {

@@ -463,7 +463,11 @@ internal sealed class SettingsWindow : Window
 
             rows.Children.Add(CreateVolumeSlider());
             var testButton = PixelButtonUi.Button("Probar sonido", "green", 156, 60,
-                () => _testAudio.PlayEffect("sounds/effects/ui_click_back.mp3"), fontSize: 18);
+                () =>
+                {
+                    EncounterDiagnostics.Write("audio-test", "Test sound button clicked.");
+                    _testAudio.PlayEffect("sounds/effects/ui_click_back.mp3");
+                }, fontSize: 18);
             testButton.HorizontalAlignment = System.Windows.HorizontalAlignment.Center; testButton.Margin = new Thickness(0, 1, 0, 0);
             rows.Children.Add(testButton);
         }

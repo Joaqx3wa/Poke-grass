@@ -740,7 +740,7 @@ internal sealed class DesktopCompanionWindow : Window
         _cancelBattle(this);
         if (_megaTransformationActive || _capture.MegaFormId is not null
             || !_megaEvolutions.TryGetForm(formId, out var form)
-            || !form.BasePokemonId.Equals(_capture.Id, StringComparison.OrdinalIgnoreCase)) return;
+            || !_megaEvolutions.CanApplyForm(_capture, formId)) return;
 
         BitmapSource[,] transitionFrames;
         PokemonEntry megaEntry;

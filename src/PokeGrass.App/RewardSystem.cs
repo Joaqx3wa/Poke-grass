@@ -66,7 +66,7 @@ internal sealed class RewardBalance
 
     internal RewardItemGrant MakeCompanionGift(Random random)
     {
-        // Reuse the common supply table: its weights favor everyday items and keep rare items scarce.
+        // Use the same balanced item distribution as periodic supplies.
         var pool = SupplyPool.Where(drop => !drop.Id.Equals("master-ball", StringComparison.OrdinalIgnoreCase)).ToArray();
         if (pool.Length == 0) throw new InvalidDataException("La tabla de regalos no contiene objetos permitidos.");
         var selected = Choose(pool, random);
@@ -101,7 +101,10 @@ internal sealed class RewardBalance
                 }
                 : new (string Id, int Weight)[]
                 {
-                    ("poke-ball", 42), ("razz-berry", 30), ("nanab-berry", 28)
+                    ("poke-ball", 20), ("super-ball", 20), ("ultra-ball", 5),
+                    ("razz-berry", 15), ("nanab-berry", 15),
+                    ("silver-razz-berry", 8), ("silver-nanab-berry", 8),
+                    ("golden-razz-berry", 2), ("golden-nanab-berry", 2), ("repel", 5)
                 };
 
         var totalWeight = weightedItems.Sum(item => item.Weight);

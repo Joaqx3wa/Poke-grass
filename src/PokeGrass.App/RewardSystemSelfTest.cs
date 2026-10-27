@@ -17,8 +17,8 @@ internal static class RewardSystemSelfTest
         var silverRequestGift = balance.MakeBerryRequestGift("silver-razz-berry", new FixedRandom());
         var goldenExceptionalGift = balance.MakeBerryRequestGift("golden-nanab-berry", new FixedRandom());
         var goldenRegularGift = balance.MakeBerryRequestGift("golden-razz-berry", new NonZeroRandom());
-        Assert(normalRequestGift.Id is "poke-ball" or "razz-berry" or "nanab-berry",
-            "Las peticiones de bayas normales solo deben entregar recompensas comunes.");
+        Assert(normalRequestGift.Id != "master-ball",
+            "Las peticiones normales deben poder entregar objetos mejorados sin conceder Master Ball.");
         Assert(silverRequestGift.Id != "master-ball" && goldenRegularGift.Id != "master-ball",
             "La Master Ball debe quedar excluida de las categorías normal y plateada y del resultado dorado común.");
         Assert(goldenExceptionalGift.Id == "master-ball",
@@ -46,10 +46,10 @@ internal static class RewardSystemSelfTest
         Assert(!firstShiny.ShinyDuplicate && firstShiny.Rewards.Count == 0, "El primer shiny se guarda sin regalo de shiny duplicado.");
         Assert(secondShiny.ShinyDuplicate && secondShiny.Rewards.Count > 0 && secondShiny.Rewards.Any(item => item.Id == "master-ball"),
             "Un shiny duplicado puede producir la Master Ball excepcional de su tabla especial.");
-        Assert(save.GetPcSnapshot().Captures.Count(record => record.Id == pikachu.Id && record.IsShiny) == 0
+        Assert(save.GetPcSnapshot().Captures.Count(record => record.Id == pikachu.Id && record.IsShiny) == 2
             && JsonSerializer.Deserialize<GameSaveData>(File.ReadAllText(capturePath))!.DuplicateCaptureRecords
-                .Count(record => record.Id == pikachu.Id && record.IsShiny) == 2,
-            "Los shiny duplicados deben compartir el cupo y persistir en el registro de duplicados.");
+                .All(record => record.Id != pikachu.Id || !record.IsShiny),
+            "Los shiny duplicados deben permanecer en la PC y no en el registro oculto de duplicados.");
 
         var supplyPath = Path.Combine(tempRoot, "supply.json");
         var supplySave = GameSaveStore.LoadOrCreate(supplyPath);
@@ -123,14 +123,46 @@ internal static class RewardSystemSelfTest
 
         var persisted = JsonSerializer.Deserialize<GameSaveData>(File.ReadAllText(capturePath))!;
         Assert(persisted.AppliedRewardEvents.Any(entry => entry.EventId == "capture:normal-duplicate")
-            && persisted.DuplicateCaptureRecords.Count(record => record.Id == pikachu.Id && record.IsShiny) == 2,
+            && persisted.Captures.Count(record => record.Id == pikachu.Id && record.IsShiny) == 2,
             "Las transacciones de duplicados y su identidad shiny deben persistir.");
+        VerifyRewardDistribution(balance);
         Summary = "Recompensas y datos: regalos por categoría de baya, Master Ball dorada excepcional, idempotencia, exportación, importación validada, copia de seguridad y rechazo de archivos inválidos verificados con guardados temporales aislados.";
     }
 
     private static void Assert(bool condition, string message)
     {
         if (!condition) throw new InvalidOperationException(message);
+    }
+
+    private static void VerifyRewardDistribution(RewardBalance balance)
+    {
+        const int samples = 20000;
+        var random = new Random(27102026);
+        var totals = new Dictionary<string, long>(StringComparer.OrdinalIgnoreCase);
+        for (var i = 0; i < samples; i++)
+        {
+            var supply = balance.MakeSupply(random);
+            Assert(supply.Any(item => item.Id == "super-ball"),
+                "Cada suministro debe aportar Super Balls para evitar depender de duplicados raros.");
+            foreach (var item in supply) totals[item.Id] = totals.GetValueOrDefault(item.Id) + item.Quantity;
+            var daily = balance.MakeDailyGift(random);
+            Assert(daily.Any(item => item.Id == "ultra-ball") && daily.Any(item => item.Id == "super-ball"),
+                "El regalo diario debe asegurar acceso a Super Balls y Ultra Balls.");
+            Assert(supply.Concat(daily).All(item => item.Id != "master-ball"),
+                "Los suministros y regalos diarios no deben conceder Master Balls.");
+        }
+        Assert(totals["poke-ball"] < 3 * totals["super-ball"]
+            && totals["poke-ball"] < 8 * totals["ultra-ball"],
+            "El suministro no debe volver a concentrar casi todas las Balls en Poké Balls.");
+        foreach (var id in new[] { "silver-razz-berry", "silver-nanab-berry", "golden-razz-berry", "golden-nanab-berry" })
+            Assert(totals.GetValueOrDefault(id) > samples / 5,
+                $"La baya {id} debe aparecer regularmente en los suministros.");
+        foreach (var id in balance.Items.Keys.Where(id => id.StartsWith("incense-", StringComparison.OrdinalIgnoreCase)))
+            Assert(totals.GetValueOrDefault(id) > samples / 25,
+                $"El incienso {id} debe ser accesible mediante suministros ordinarios.");
+        var gifts = Enumerable.Range(0, samples).Select(_ => balance.MakeBerryRequestGift("razz-berry", random)).ToArray();
+        Assert(gifts.Count(item => item.Id is "super-ball" or "ultra-ball") > samples / 5,
+            "Las peticiones normales también deben ofrecer Balls mejoradas.");
     }
 
     private sealed class FixedRandom : Random

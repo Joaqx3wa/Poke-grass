@@ -106,9 +106,9 @@ internal static class PcStorageSelfTest
         save.TryRecordCapture(metadata.Get(ids[0]), true, out var shinyOne);
         save.TryRecordCapture(metadata.Get(ids[0]), true, out var shinyTwo);
         var shinySnapshot = save.GetPcSnapshot();
-        Assert(shinyOne && shinyTwo && shinySnapshot.Captures.Count == 31
-            && shinySnapshot.Captures.All(item => item.Id != ids[0] || !item.IsShiny),
-            "Los ejemplares shiny deben compartir el cupo de su forma y no añadir slots extra.");
+        Assert(shinyOne && shinyTwo && shinySnapshot.Captures.Count == 33
+            && shinySnapshot.Captures.Count(item => item.Id == ids[0] && item.IsShiny) == 2,
+            "Todos los shiny deben ocupar una casilla del PC, incluso si su forma ya alcanzó el cupo normal.");
         Assert(shinySnapshot.Captures.All(record => record.BoxId is not null && record.BoxSlot is >= 0 and < 30),
             "Cada ejemplar normal o shiny debe tener una ubicación válida.");
     }
