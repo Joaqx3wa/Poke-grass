@@ -198,6 +198,7 @@ internal sealed class DesktopCompanionWindow : Window
     private readonly ContextMenu _contextMenu;
     private readonly MenuItem _pinMenuItem;
     private readonly MenuItem _megaMenuItem;
+    private readonly List<MenuItem> _megaFormMenuItems = [];
     private readonly MenuItem _rallyMenuItem;
     private readonly MenuItem _toyMenuItem;
     private readonly Point? _dropCenter;
@@ -714,7 +715,9 @@ internal sealed class DesktopCompanionWindow : Window
 
     private void RefreshMegaMenu()
     {
-        _megaMenuItem.Items.Clear();
+        foreach (var option in _megaFormMenuItems) _contextMenu.Items.Remove(option);
+        _megaFormMenuItems.Clear();
+        _megaMenuItem.Tag = null;
         _megaMenuItem.IsEnabled = !_megaTransformationActive;
         if (_capture.MegaFormId is not null)
         {
@@ -726,12 +729,26 @@ internal sealed class DesktopCompanionWindow : Window
         var forms = _megaEvolutions.GetFormsFor(_capture);
         _megaMenuItem.Visibility = forms.Count == 0 ? Visibility.Collapsed : Visibility.Visible;
         _megaMenuItem.Header = "Megaevolucionar";
-        if (forms.Count <= 1) return;
+        if (forms.Count <= 1)
+        {
+            _megaMenuItem.Tag = forms.FirstOrDefault()?.FormId;
+            return;
+        }
+
+        // The pixel menu template displays leaf rows, not WPF submenu popups.
+        // Keep every form directly selectable in the existing root popup so
+        // its z-order and outside-click handling apply to these options too.
+        _megaMenuItem.Visibility = Visibility.Collapsed;
+        var insertIndex = _contextMenu.Items.IndexOf(_megaMenuItem) + 1;
         foreach (var form in forms)
         {
-            var option = new MenuItem { Header = form.DisplayName, Tag = form.FormId };
+            var option = new MenuItem
+            {
+                Header = form.DisplayName, Tag = form.FormId, IsEnabled = !_megaTransformationActive
+            };
             option.Click += (_, _) => BeginMegaEvolution(form.FormId);
-            _megaMenuItem.Items.Add(option);
+            _megaFormMenuItems.Add(option);
+            _contextMenu.Items.Insert(insertIndex++, option);
         }
     }
 

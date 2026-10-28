@@ -19,7 +19,8 @@ public partial class App : System.Windows.Application
     [STAThread]
     public static int Main(string[] args)
     {
-        if (!args.Contains("--self-test", StringComparer.OrdinalIgnoreCase))
+        if (!args.Contains("--self-test", StringComparer.OrdinalIgnoreCase)
+            && !args.Contains("--mega-evolution-self-test", StringComparer.OrdinalIgnoreCase))
             Velopack.VelopackApp.Build().Run();
         _entryArguments = args;
         var application = new App();
@@ -124,6 +125,23 @@ public partial class App : System.Windows.Application
         };
         EncounterDiagnostics.Write("startup", $"PokéGrass starting; version={typeof(App).Assembly.GetName().Version}; base={AppContext.BaseDirectory}");
 
+        if (startupArgs.Contains("--mega-evolution-self-test", StringComparer.OrdinalIgnoreCase))
+        {
+            try
+            {
+                MegaEvolutionSelfTest.Run();
+                File.WriteAllText(Path.Combine(Path.GetTempPath(), "PokéGrass-mega-evolution-self-test.log"),
+                    $"PASS{Environment.NewLine}{MegaEvolutionSelfTest.Summary}");
+                Shutdown(0);
+            }
+            catch (Exception exception)
+            {
+                File.WriteAllText(Path.Combine(Path.GetTempPath(), "PokéGrass-mega-evolution-self-test.log"), exception.ToString());
+                Shutdown(1);
+            }
+            return;
+        }
+
         if (startupArgs.Contains("--ditto-transform-self-test", StringComparer.OrdinalIgnoreCase))
         {
             try
@@ -201,6 +219,7 @@ public partial class App : System.Windows.Application
             {
                 EncounterSelfTest.Run();
                 EncounterGenderSelfTest.Run();
+                MegaEvolutionSelfTest.Run();
                 PcStorageSelfTest.Run();
                 CaptureLimitSelfTest.Run();
                 RewardSystemSelfTest.Run();
@@ -230,7 +249,7 @@ public partial class App : System.Windows.Application
                 CompanionBehaviorSelfTest.Run();
                 DesktopPokemonCouplesSelfTest.Run();
                 File.WriteAllText(Path.Combine(Path.GetTempPath(), "PokéGrass-self-test.log"),
-                    $"PASS{Environment.NewLine}{EncounterSelfTest.SimulationSummary}{Environment.NewLine}{EncounterGenderSelfTest.Summary}{Environment.NewLine}{PcStorageSelfTest.Summary}{Environment.NewLine}{CaptureLimitSelfTest.Summary}{Environment.NewLine}{RewardSystemSelfTest.Summary}{Environment.NewLine}{SaveBackupSelfTest.Summary}{Environment.NewLine}{ShinySparkSelfTest.Summary}{Environment.NewLine}{battleEffectSummary}{Environment.NewLine}{BattleBackgroundSelectorSelfTest.Summary}{Environment.NewLine}Mega Heracross battle types: {string.Join('/', megaHeracrossTypes)}{Environment.NewLine}{alphaEffectSummary}{Environment.NewLine}{megaAuraSummary}{Environment.NewLine}{megaBubbleSummary}{Environment.NewLine}{dittoTransformSummary}{Environment.NewLine}{EvolutionSystemSelfTest.Summary}{Environment.NewLine}{CompanionBehaviorSelfTest.Summary}{Environment.NewLine}{DesktopPokemonCouplesSelfTest.Summary}");
+                    $"PASS{Environment.NewLine}{EncounterSelfTest.SimulationSummary}{Environment.NewLine}{EncounterGenderSelfTest.Summary}{Environment.NewLine}{MegaEvolutionSelfTest.Summary}{Environment.NewLine}{PcStorageSelfTest.Summary}{Environment.NewLine}{CaptureLimitSelfTest.Summary}{Environment.NewLine}{RewardSystemSelfTest.Summary}{Environment.NewLine}{SaveBackupSelfTest.Summary}{Environment.NewLine}{ShinySparkSelfTest.Summary}{Environment.NewLine}{battleEffectSummary}{Environment.NewLine}{BattleBackgroundSelectorSelfTest.Summary}{Environment.NewLine}Mega Heracross battle types: {string.Join('/', megaHeracrossTypes)}{Environment.NewLine}{alphaEffectSummary}{Environment.NewLine}{megaAuraSummary}{Environment.NewLine}{megaBubbleSummary}{Environment.NewLine}{dittoTransformSummary}{Environment.NewLine}{EvolutionSystemSelfTest.Summary}{Environment.NewLine}{CompanionBehaviorSelfTest.Summary}{Environment.NewLine}{DesktopPokemonCouplesSelfTest.Summary}");
                 Shutdown(0);
             }
             catch (Exception exception)
