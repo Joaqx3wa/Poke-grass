@@ -169,7 +169,11 @@ public partial class GardenWindow : Window
         _alphaEffectTimer.Tick += OnAlphaEffectTick;
 
         SourceInitialized += OnSourceInitialized;
-        LocationChanged += (_, _) => ScheduleSave();
+        LocationChanged += (_, _) =>
+        {
+            ScheduleSave();
+            if (_timedEffects?.HasRepel == true || _timedEffects?.HasIncense == true) RenderScene();
+        };
         Loaded += (_, _) => StartRandomInterval();
         IsVisibleChanged += OnVisibilityChanged;
         Closed += (_, _) =>
@@ -879,8 +883,11 @@ public partial class GardenWindow : Window
         const double designWidth = 32;
         var width = designWidth * scaleX;
         var height = designWidth * _timedEffectIndicatorFrame.PixelHeight / _timedEffectIndicatorFrame.PixelWidth * scaleY;
-        var left = ((_gardenBitmap.PixelWidth - designWidth) / 2 + EffectBleedX) * scaleX;
-        var top = (EffectBleedY - 20) * scaleY;
+        var garden = GetPhysicalBounds();
+        var area = Forms.Screen.FromRectangle(garden).WorkingArea;
+        var position = TimedIndicatorPosition(garden, area, _scale, width * dpiX, height * dpiY);
+        var left = (position.X - garden.Left + EffectBleedX * _scale) / dpiX;
+        var top = (position.Y - garden.Top + EffectBleedY * _scale) / dpiY;
 
         var indicator = new Grid { Width = width, Height = height, IsHitTestVisible = false };
         var frame = new Image
@@ -917,6 +924,25 @@ public partial class GardenWindow : Window
         Canvas.SetLeft(indicator, left);
         Canvas.SetTop(indicator, top);
         SceneCanvas.Children.Add(indicator);
+    }
+
+    internal static Point TimedIndicatorPosition(Drawing.Rectangle garden, Drawing.Rectangle area,
+        int scale, double width, double height)
+    {
+        // Both placements stay inside the garden window's transparent margin.
+        var x = garden.Left + (garden.Width - width) / 2;
+        var above = garden.Top - 20 * scale;
+        var below = garden.Bottom + 4 * scale;
+        var y = above >= area.Top ? above
+            : below + height <= area.Bottom ? below : garden.Top + 4 * scale;
+        // The pin/close controls also move below at the top edge. Leave their
+        // right-hand space free, including their minimum size at garden 1x.
+        if (y == below) x = garden.Left + scale;
+        var minX = Math.Max(area.Left, garden.Left - EffectBleedX * scale);
+        var maxX = Math.Max(minX, Math.Min(area.Right, garden.Right + EffectBleedX * scale) - width);
+        var minY = Math.Max(area.Top, garden.Top - EffectBleedY * scale);
+        var maxY = Math.Max(minY, Math.Min(area.Bottom, garden.Bottom + EffectBleedY * scale) - height);
+        return new Point(Math.Clamp(x, minX, maxX), Math.Clamp(y, minY, maxY));
     }
 
     private static string? IncenseIconPath(string? id) => id switch

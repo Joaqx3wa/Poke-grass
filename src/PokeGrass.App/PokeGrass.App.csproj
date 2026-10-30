@@ -12,7 +12,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <AssemblyName>PokéGrass</AssemblyName>
     <RootNamespace>PokeGrass</RootNamespace>
-    <Version>0.1.3-beta</Version>
+    <Version>0.1.4-beta</Version>
     <InformationalVersion>$(Version)</InformationalVersion>
     <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
     <StartupObject>PokeGrass.App</StartupObject>

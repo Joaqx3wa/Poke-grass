@@ -24,7 +24,11 @@ internal static class AppUpdateService
     public static Task DownloadAsync(UpdateManager manager, UpdateInfo update, Action<int> progress,
         CancellationToken cancellationToken = default) => manager.DownloadUpdatesAsync(update, progress, cancellationToken);
 
-    public static void ApplyAndRestart(UpdateManager manager, UpdateInfo update) =>
-        manager.ApplyUpdatesAndRestart(update.TargetFullRelease);
+    public static void ApplyAndRestart(UpdateManager manager, UpdateInfo update)
+    {
+        // Wait for WPF persistence and cleanup without the updater's OK dialog.
+        manager.WaitExitThenApplyUpdates(update.TargetFullRelease, silent: true, restart: true);
+        System.Windows.Application.Current.Shutdown();
+    }
 
 }

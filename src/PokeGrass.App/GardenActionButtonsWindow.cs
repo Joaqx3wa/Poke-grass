@@ -529,7 +529,7 @@ internal sealed class SettingsWindow : Window
 
             var version = result.Update.TargetFullRelease.Version.ToString();
             if (!PixelConfirmWindow.Confirm(this, "Actualización disponible",
-                    $"Está disponible PokéGrass {version}. ¿Descargar e instalar ahora? Puedes posponerlo y volver a comprobar después."))
+                    $"Está disponible PokéGrass {version}. ¿Descargar e instalar ahora? El juego se cerrará y volverá a abrirse automáticamente al terminar. Puedes posponerlo y volver a comprobar después."))
             {
                 if (_updateStatus is not null) _updateStatus.Text = $"PokéGrass {version} está disponible; actualización pospuesta.";
                 return;

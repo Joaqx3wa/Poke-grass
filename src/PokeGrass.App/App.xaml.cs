@@ -19,9 +19,30 @@ public partial class App : System.Windows.Application
     [STAThread]
     public static int Main(string[] args)
     {
-        if (!args.Contains("--self-test", StringComparer.OrdinalIgnoreCase)
-            && !args.Contains("--mega-evolution-self-test", StringComparer.OrdinalIgnoreCase))
+        string[] selfTests = ["--self-test", "--mega-evolution-self-test", "--ditto-transform-self-test",
+            "--couples-self-test", "--battle-background-self-test", "--evolution-self-test", "--desktop-shell-self-test"];
+        var isSelfTest = args.Any(argument => selfTests.Contains(argument, StringComparer.OrdinalIgnoreCase));
+        var restartParent = args.FirstOrDefault(argument => argument.StartsWith("--restart-after-process=", StringComparison.OrdinalIgnoreCase));
+        if (restartParent is not null && int.TryParse(restartParent.Split('=', 2)[1], out var parentId))
+        {
+            try
+            {
+                using var parent = Process.GetProcessById(parentId);
+                if (!parent.WaitForExit(60_000)) return 1;
+            }
+            catch (ArgumentException) { } // The old instance has already exited.
+        }
+        // Installer lifecycle hooks must work while the game is running, but
+        // must never reach the game/save initialization path.
+        if (!isSelfTest && args.Any(argument => argument.StartsWith("--veloapp-", StringComparison.OrdinalIgnoreCase)))
+        {
             Velopack.VelopackApp.Build().Run();
+            return 0;
+        }
+        using var instance = isSelfTest ? null : SingleInstanceGate.TryAcquire(Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "PokéGrass"));
+        if (!isSelfTest && instance is null) return 0;
+        if (!isSelfTest) Velopack.VelopackApp.Build().Run();
         _entryArguments = args;
         var application = new App();
         application.InitializeComponent();
@@ -125,6 +146,22 @@ public partial class App : System.Windows.Application
         };
         EncounterDiagnostics.Write("startup", $"PokéGrass starting; version={typeof(App).Assembly.GetName().Version}; base={AppContext.BaseDirectory}");
 
+        if (startupArgs.Contains("--desktop-shell-self-test", StringComparer.OrdinalIgnoreCase))
+        {
+            try
+            {
+                DesktopShellSelfTest.Run();
+                File.WriteAllText(Path.Combine(Path.GetTempPath(), "PokéGrass-desktop-shell-self-test.log"), "PASS");
+                Shutdown(0);
+            }
+            catch (Exception exception)
+            {
+                File.WriteAllText(Path.Combine(Path.GetTempPath(), "PokéGrass-desktop-shell-self-test.log"), exception.ToString());
+                Shutdown(1);
+            }
+            return;
+        }
+
         if (startupArgs.Contains("--mega-evolution-self-test", StringComparer.OrdinalIgnoreCase))
         {
             try
@@ -224,6 +261,7 @@ public partial class App : System.Windows.Application
                 CaptureLimitSelfTest.Run();
                 RewardSystemSelfTest.Run();
                 SaveBackupSelfTest.Run();
+                DesktopShellSelfTest.Run();
                 ShinySparkSelfTest.Run();
                 var battleEffectSummary = BattleEffectCatalog.ValidateAndSummarize();
                 BattleBackgroundSelectorSelfTest.Run();
@@ -682,7 +720,7 @@ public partial class App : System.Windows.Application
             if (!check.IsInstalled || check.Update is null || _gameSave is null) return;
             var version = check.Update.TargetFullRelease.Version.ToString();
             var answer = System.Windows.MessageBox.Show(
-                $"Hay una versión nueva de PokéGrass ({version}).\n\n¿Quieres descargarla e instalarla ahora? Puedes posponerla desde Configuración.",
+                $"Hay una versión nueva de PokéGrass ({version}).\n\n¿Quieres descargarla e instalarla ahora? El juego se cerrará y volverá a abrirse automáticamente al terminar. Puedes posponerla desde Configuración.",
                 "Actualización disponible", MessageBoxButton.YesNo, MessageBoxImage.Information);
             if (answer != MessageBoxResult.Yes) return;
 
@@ -1179,6 +1217,7 @@ public partial class App : System.Windows.Application
             _ = Process.Start(new ProcessStartInfo(executable)
             {
                 UseShellExecute = true,
+                ArgumentList = { $"--restart-after-process={Environment.ProcessId}" },
                 WorkingDirectory = Path.GetDirectoryName(executable)!
             });
             Shutdown();
